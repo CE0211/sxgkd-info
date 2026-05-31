@@ -2,94 +2,491 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>信息门户</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f766e">
+  <title>山西工程科技职业大学信息门户</title>
   <style>
-    :root { color-scheme: light; --bg:#f6f7f9; --panel:#fff; --text:#1f2937; --muted:#6b7280; --line:#d9dee7; --accent:#0f766e; --accent-soft:#e0f2f1; --ok:#166534; --ok-soft:#dcfce7; --warn:#b45309; --warn-soft:#fff7ed; }
+    :root {
+      color-scheme: light;
+      --bg: #f4f6f8;
+      --surface: #ffffff;
+      --surface-soft: #eef5f4;
+      --ink: #17202a;
+      --muted: #667085;
+      --line: #d8e0e7;
+      --accent: #0f766e;
+      --accent-strong: #0b5f59;
+      --exam: #2563eb;
+      --contest: #7c3aed;
+      --grant: #b45309;
+      --holiday: #15803d;
+      --life: #d14b2f;
+      --other: #475569;
+      --shadow: 0 16px 40px rgba(18, 28, 45, .08);
+      --radius: 8px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+        --bg: #111827;
+        --surface: #182232;
+        --surface-soft: #132d2a;
+        --ink: #eef2f7;
+        --muted: #a9b4c2;
+        --line: #2b394d;
+        --accent: #5eead4;
+        --accent-strong: #99f6e4;
+        --shadow: 0 18px 48px rgba(0, 0, 0, .26);
+      }
+    }
     * { box-sizing: border-box; }
-    body { margin:0; background:var(--bg); color:var(--text); font-family:"Microsoft YaHei","Segoe UI",sans-serif; line-height:1.6; }
-    main { max-width:1120px; margin:0 auto; padding:32px 20px 48px; }
-    header { display:flex; justify-content:space-between; gap:16px; align-items:flex-end; border-bottom:1px solid var(--line); padding-bottom:18px; margin-bottom:22px; }
-    h1 { margin:0; font-size:28px; font-weight:700; letter-spacing:0; }
-    .meta { color:var(--muted); font-size:14px; text-align:right; }
-    .summary { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:14px 16px; margin-bottom:16px; display:flex; flex-wrap:wrap; gap:10px 18px; color:var(--muted); }
-    .summary strong { color:var(--text); }
-    .status { background:var(--ok-soft); color:var(--ok); border:1px solid #bbf7d0; border-radius:8px; padding:10px 14px; margin-bottom:16px; font-weight:700; }
-    .sources { color:var(--muted); font-size:13px; margin:-4px 0 16px; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; }
-    section { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:18px; }
-    h2 { margin:0 0 12px; font-size:18px; letter-spacing:0; }
-    .empty { color:var(--muted); margin:0; }
-    .pill { display:inline-block; margin-left:8px; padding:2px 8px; border-radius:999px; background:var(--accent-soft); color:var(--accent); font-size:12px; vertical-align:1px; }
-    a { color:var(--accent); text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    .notice { border-top:1px solid var(--line); padding-top:12px; margin-top:12px; }
-    .notice:first-of-type { border-top:0; padding-top:0; margin-top:0; }
-    .notice-head { display:flex; align-items:flex-start; gap:8px; }
-    .notice-title { font-weight:700; font-size:16px; }
-    .notice-meta { color:var(--muted); font-size:13px; margin-top:4px; }
-    .notice p { margin:8px 0; }
-    .attachments { color:var(--muted); font-size:14px; }
-    .attachments strong { color:var(--text); }
-    .tag { flex:none; border-radius:999px; padding:1px 7px; background:var(--warn-soft); color:var(--warn); font-size:12px; line-height:20px; }
-    .site-note { margin-top:18px; color:var(--muted); font-size:13px; text-align:center; }
-    @media (max-width: 640px) { header { display:block; } .meta { text-align:left; margin-top:8px; } main { padding:22px 14px 36px; } }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", Arial, sans-serif;
+      line-height: 1.6;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent-strong); text-decoration: underline; text-underline-offset: 3px; }
+    .page {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      padding: calc(20px + env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) calc(40px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+    }
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: clamp(18px, 4vw, 34px);
+      margin-bottom: 16px;
+    }
+    .hero-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: start;
+    }
+    .eyebrow {
+      margin: 0 0 6px;
+      color: var(--accent-strong);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(24px, 4vw, 38px);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .hero-copy {
+      max-width: 720px;
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .status-card {
+      min-width: 230px;
+      background: var(--surface-soft);
+      border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--line));
+      border-radius: var(--radius);
+      padding: 14px;
+    }
+    .status-label {
+      margin: 0 0 3px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .status-value {
+      margin: 0;
+      color: var(--accent-strong);
+      font-size: 20px;
+      font-weight: 800;
+    }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 12px;
+      background: color-mix(in srgb, var(--surface) 82%, var(--bg));
+    }
+    .metric span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .metric strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 22px;
+      line-height: 1.1;
+    }
+    .source-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .source-row a {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 10px;
+      background: var(--surface);
+      color: var(--muted);
+    }
+    .category-nav {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+      margin: 16px 0;
+    }
+    .category-chip {
+      display: flex;
+      min-height: 54px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      border: 1px solid var(--line);
+      border-left-width: 4px;
+      border-radius: var(--radius);
+      background: var(--surface);
+      padding: 10px 12px;
+      box-shadow: 0 8px 20px rgba(18, 28, 45, .04);
+    }
+    .category-chip span { color: var(--muted); font-size: 13px; font-weight: 700; }
+    .category-chip strong { font-size: 22px; line-height: 1; }
+    .exam { border-left-color: var(--exam); }
+    .contest { border-left-color: var(--contest); }
+    .grant { border-left-color: var(--grant); }
+    .holiday { border-left-color: var(--holiday); }
+    .life { border-left-color: var(--life); }
+    .other { border-left-color: var(--other); }
+    .layout {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      align-items: start;
+    }
+    .category-section {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 30px rgba(18, 28, 45, .05);
+      padding: 16px;
+      scroll-margin-top: 16px;
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+    }
+    .section-kicker {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    h2 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+    .section-count {
+      min-width: 42px;
+      height: 34px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: var(--radius);
+      color: #fff;
+      font-weight: 800;
+    }
+    .section-count.exam { background: var(--exam); }
+    .section-count.contest { background: var(--contest); }
+    .section-count.grant { background: var(--grant); }
+    .section-count.holiday { background: var(--holiday); }
+    .section-count.life { background: var(--life); }
+    .section-count.other { background: var(--other); }
+    .notice-list {
+      display: grid;
+      gap: 12px;
+    }
+    .notice-card {
+      border: 1px solid var(--line);
+      border-left-width: 4px;
+      border-radius: var(--radius);
+      padding: 13px;
+      background: color-mix(in srgb, var(--surface) 88%, var(--bg));
+      overflow-wrap: anywhere;
+    }
+    .notice-topline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 10px;
+      margin-bottom: 7px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .notice-title-row {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+    .notice-title {
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.42;
+    }
+    .new-badge {
+      flex: none;
+      border-radius: 999px;
+      background: #fff7ed;
+      color: #b45309;
+      border: 1px solid #fed7aa;
+      padding: 1px 7px;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 20px;
+    }
+    .notice-card p {
+      margin: 8px 0 10px;
+      color: color-mix(in srgb, var(--ink) 84%, var(--muted));
+      font-size: 14px;
+    }
+    .attachments {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .attachments strong {
+      color: var(--ink);
+    }
+    .muted { color: var(--muted); }
+    .empty-state {
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      color: var(--muted);
+      text-align: center;
+      background: color-mix(in srgb, var(--surface) 70%, var(--bg));
+    }
+    .site-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+    @media (max-width: 980px) {
+      .hero-top { grid-template-columns: 1fr; }
+      .status-card { min-width: 0; }
+      .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .category-nav { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .layout { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .page { padding-left: max(12px, env(safe-area-inset-left)); padding-right: max(12px, env(safe-area-inset-right)); }
+      .hero { padding: 16px; }
+      .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+      .metric { padding: 10px; }
+      .metric strong { font-size: 20px; }
+      .category-nav {
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        scroll-snap-type: x proximity;
+        -webkit-overflow-scrolling: touch;
+      }
+      .category-chip {
+        min-width: 138px;
+        scroll-snap-align: start;
+      }
+      .source-row {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+      }
+      .source-row a { flex: none; }
+      .category-section { padding: 13px; }
+      .notice-title-row { align-items: flex-start; }
+    }
   </style>
 </head>
 <body>
-  <main>
-    <header>
-      <div>
-        <h1>山西工程科技职业大学信息门户</h1>
-        <div class="meta">自动检测时间：每天 12:00 和 20:00</div>
+  <main class="page">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-top">
+        <div>
+          <p class="eyebrow">公开通知整理</p>
+          <h1 id="page-title">山西工程科技职业大学信息门户</h1>
+          <p class="hero-copy">聚合学校公开通知，按考试、比赛、奖学金、放假、日常生活和其他相关分类，方便在手机和电脑上快速查看原文。</p>
+        </div>
+        <div class="status-card">
+          <p class="status-label">最后检查</p>
+          <p class="status-value">2026-05-31 19:47:49</p>
+          <p class="status-label">下次自动检测</p>
+          <p class="status-value">今日 20:00</p>
+        </div>
       </div>
-      <div class="meta">最后检查：2026-05-31 19:47:49</div>
-    </header>
-    <div class="status">本次新增匹配通知 1 条</div>
-    <div class="sources">本次检查来源：<a href="https://www.sxgkd.edu.cn/tzgg.htm" target="_blank" rel="noreferrer">学校主站通知公告</a>、<a href="https://jwb.sxgkd.edu.cn/index/tzgg.htm" target="_blank" rel="noreferrer">教务部通知公告</a>、<a href="https://cxcyxy.sxgkd.edu.cn/tzgg.htm" target="_blank" rel="noreferrer">创新创业学院通知公告</a>、<a href="https://zsxxw.sxgkd.edu.cn/" target="_blank" rel="noreferrer">招生信息网</a>、<a href="https://xsgzb.sxgkd.edu.cn/tzgg.htm" target="_blank" rel="noreferrer">学生工作部/武装部通知公告</a></div>
-    <div class="summary">
-      <span>本次新增：<strong>1</strong></span>
-      <span>已记录考试：<strong>2</strong></span>
-      <span>已记录比赛：<strong>0</strong></span>
-      <span>已记录奖学金：<strong>0</strong></span>
-      <span>已记录放假：<strong>0</strong></span>
-      <span>已记录日常生活：<strong>0</strong></span>
-      <span>已记录其他相关：<strong>1</strong></span>
+      <div class="metrics" aria-label="检测概览">
+        <div class="metric"><span>本次新增</span><strong>1</strong></div>
+        <div class="metric"><span>已记录通知</span><strong>3</strong></div>
+        <div class="metric"><span>分类数量</span><strong>6</strong></div>
+        <div class="metric"><span>检测频率</span><strong>2/日</strong></div>
+      </div>
+      <div class="source-row" aria-label="本次检查来源"><a href="https://www.sxgkd.edu.cn/tzgg.htm" target="_blank" rel="noreferrer">学校主站</a><a href="https://jwb.sxgkd.edu.cn/index/tzgg.htm" target="_blank" rel="noreferrer">教务部</a><a href="https://cxcyxy.sxgkd.edu.cn/tzgg.htm" target="_blank" rel="noreferrer">创新创业学院</a><a href="https://zsxxw.sxgkd.edu.cn/" target="_blank" rel="noreferrer">招生信息网</a><a href="https://xsgzb.sxgkd.edu.cn/tzgg.htm" target="_blank" rel="noreferrer">学生工作部</a></div>
+    </section>
+
+    <nav class="category-nav" aria-label="分类导航">
+<a class="category-chip exam" href="#cat-%E8%80%83%E8%AF%95">
+  <span>考试</span><strong>2</strong>
+</a>
+<a class="category-chip contest" href="#cat-%E6%AF%94%E8%B5%9B">
+  <span>比赛</span><strong>0</strong>
+</a>
+<a class="category-chip grant" href="#cat-%E5%A5%96%E5%AD%A6%E9%87%91">
+  <span>奖学金</span><strong>0</strong>
+</a>
+<a class="category-chip holiday" href="#cat-%E6%94%BE%E5%81%87">
+  <span>放假</span><strong>0</strong>
+</a>
+<a class="category-chip life" href="#cat-%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB">
+  <span>日常生活</span><strong>0</strong>
+</a>
+<a class="category-chip other" href="#cat-%E5%85%B6%E4%BB%96%E7%9B%B8%E5%85%B3">
+  <span>其他相关</span><strong>1</strong>
+</a>
+    </nav>
+
+    <div class="layout">
+<section class="category-section" id="cat-%E8%80%83%E8%AF%95">
+  <div class="section-head">
+    <div>
+      <p class="section-kicker">分类</p>
+      <h2>考试</h2>
     </div>
-    <div class="grid">
-<section><h2>考试<span class="pill">2</span></h2>    <article class="notice">
-      <div class="notice-head">
-        <a class="notice-title" href="https://zsxxw.sxgkd.edu.cn/info/1010/4460.htm" target="_blank" rel="noreferrer">专升本档案邮寄说明</a>
-        
-      </div>
-      <div class="notice-meta">2026-05-22 · 招生信息网 / 招生快讯</div>
-      <p>面向2026级专升本考生，提醒邮寄档案前按要求填写并粘贴相关资料，未按要求处理的档案将退回原学校。页面给出档案馆联系人、联系电话、邮寄地址、邮政编码，以及档案袋封面需填写的考生号、姓名、性别、联系电话和录取专业等信息。</p>
-      <div class="attachments"><strong>附件：</strong>无附件</div>
-    </article>
-    <article class="notice">
-      <div class="notice-head">
-        <a class="notice-title" href="https://zsxxw.sxgkd.edu.cn/info/1010/4430.htm" target="_blank" rel="noreferrer">山西工程科技职业大学2026年录取公告（二）（山西 专升本普通批）</a>
-        
-      </div>
-      <div class="notice-meta">2026-05-21 · 招生信息网 / 招生快讯</div>
-      <p>公告说明学校2026年山西省专升本普通批招生录取工作已结束，录取查询已同步开放。考生可在招生信息网“录取查询”中输入14位考生号、姓名和身份证号查询，页面同时列出各专业计划数、录取数及最高分、最低分等录取情况。</p>
-      <div class="attachments"><strong>附件：</strong>无附件</div>
-    </article></section>
-<section><h2>比赛<span class="pill">0</span></h2><p class="empty">暂无已记录通知。</p></section>
-<section><h2>奖学金<span class="pill">0</span></h2><p class="empty">暂无已记录通知。</p></section>
-<section><h2>放假<span class="pill">0</span></h2><p class="empty">暂无已记录通知。</p></section>
-<section><h2>日常生活<span class="pill">0</span></h2><p class="empty">暂无已记录通知。</p></section>
-<section><h2>其他相关<span class="pill">1</span></h2>    <article class="notice">
-      <div class="notice-head">
-        <a class="notice-title" href="https://xsgzb.sxgkd.edu.cn/info/1028/4030.htm" target="_blank" rel="noreferrer">关于举办我校第三届心理游园会的通知</a>
-        <span class="tag">新</span>
-      </div>
-      <div class="notice-meta">2026-05-28 · 学生工作部（武装部）/ 通知公告</div>
-      <p>学生工作部通知举办第三届心理游园会，面向各学院组织心理健康教育活动，旨在创新育人形式、涵养积极向上校园风气，助力学生身心健康发展。活动地点包含西区同心广场、中区步行街和东区技能广场，通知列出多个学院承办的互动项目。</p>
-      <div class="attachments"><strong>附件：</strong>无附件</div>
-    </article></section>
+    <span class="section-count exam">2</span>
+  </div>
+  <div class="notice-list">
+<article class="notice-card exam">
+  <div class="notice-topline">
+    <span>2026-05-22</span>
+    <span>招生信息网 / 招生快讯</span>
+  </div>
+  <div class="notice-title-row">
+    <a class="notice-title" href="https://zsxxw.sxgkd.edu.cn/info/1010/4460.htm" target="_blank" rel="noreferrer">专升本档案邮寄说明</a>
+    
+  </div>
+  <p>面向2026级专升本考生，提醒邮寄档案前按要求填写并粘贴相关资料，未按要求处理的档案将退回原学校。页面给出档案馆联系人、联系电话、邮寄地址、邮政编码，以及档案袋封面需填写的考生号、姓名、性别、联系电话和录取专业等信息。</p>
+  <div class="attachments"><strong>附件</strong><span class="muted">无附件</span></div>
+</article>
+<article class="notice-card exam">
+  <div class="notice-topline">
+    <span>2026-05-21</span>
+    <span>招生信息网 / 招生快讯</span>
+  </div>
+  <div class="notice-title-row">
+    <a class="notice-title" href="https://zsxxw.sxgkd.edu.cn/info/1010/4430.htm" target="_blank" rel="noreferrer">山西工程科技职业大学2026年录取公告（二）（山西 专升本普通批）</a>
+    
+  </div>
+  <p>公告说明学校2026年山西省专升本普通批招生录取工作已结束，录取查询已同步开放。考生可在招生信息网“录取查询”中输入14位考生号、姓名和身份证号查询，页面同时列出各专业计划数、录取数及最高分、最低分等录取情况。</p>
+  <div class="attachments"><strong>附件</strong><span class="muted">无附件</span></div>
+</article>
+  </div>
+</section>
+<section class="category-section" id="cat-%E6%AF%94%E8%B5%9B">
+  <div class="section-head">
+    <div>
+      <p class="section-kicker">分类</p>
+      <h2>比赛</h2>
     </div>
-    <div class="site-note">非学校官方，仅整理公开信息，原文以官网为准。</div>
+    <span class="section-count contest">0</span>
+  </div>
+  <div class="notice-list">
+<div class="empty-state">暂无已记录通知</div>
+  </div>
+</section>
+<section class="category-section" id="cat-%E5%A5%96%E5%AD%A6%E9%87%91">
+  <div class="section-head">
+    <div>
+      <p class="section-kicker">分类</p>
+      <h2>奖学金</h2>
+    </div>
+    <span class="section-count grant">0</span>
+  </div>
+  <div class="notice-list">
+<div class="empty-state">暂无已记录通知</div>
+  </div>
+</section>
+<section class="category-section" id="cat-%E6%94%BE%E5%81%87">
+  <div class="section-head">
+    <div>
+      <p class="section-kicker">分类</p>
+      <h2>放假</h2>
+    </div>
+    <span class="section-count holiday">0</span>
+  </div>
+  <div class="notice-list">
+<div class="empty-state">暂无已记录通知</div>
+  </div>
+</section>
+<section class="category-section" id="cat-%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB">
+  <div class="section-head">
+    <div>
+      <p class="section-kicker">分类</p>
+      <h2>日常生活</h2>
+    </div>
+    <span class="section-count life">0</span>
+  </div>
+  <div class="notice-list">
+<div class="empty-state">暂无已记录通知</div>
+  </div>
+</section>
+<section class="category-section" id="cat-%E5%85%B6%E4%BB%96%E7%9B%B8%E5%85%B3">
+  <div class="section-head">
+    <div>
+      <p class="section-kicker">分类</p>
+      <h2>其他相关</h2>
+    </div>
+    <span class="section-count other">1</span>
+  </div>
+  <div class="notice-list">
+<article class="notice-card other">
+  <div class="notice-topline">
+    <span>2026-05-28</span>
+    <span>学生工作部（武装部）/ 通知公告</span>
+  </div>
+  <div class="notice-title-row">
+    <a class="notice-title" href="https://xsgzb.sxgkd.edu.cn/info/1028/4030.htm" target="_blank" rel="noreferrer">关于举办我校第三届心理游园会的通知</a>
+    <span class="new-badge">新</span>
+  </div>
+  <p>学生工作部通知举办第三届心理游园会，面向各学院组织心理健康教育活动，旨在创新育人形式、涵养积极向上校园风气，助力学生身心健康发展。活动地点包含西区同心广场、中区步行街和东区技能广场，通知列出多个学院承办的互动项目。</p>
+  <div class="attachments"><strong>附件</strong><span class="muted">无附件</span></div>
+</article>
+  </div>
+</section>
+    </div>
+
+    <p class="site-note">非学校官方，仅整理公开信息，原文以官网为准。</p>
   </main>
 </body>
 </html>
