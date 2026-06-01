@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Codex//SXGKD Info Portal//ZH-CN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:山西工科大信息门户
+X-WR-TIMEZONE:Asia/Shanghai
+BEGIN:VEVENT
+UID:https://xsgzb.sxgkd.edu.cn/info/1028/4030.htm-活动时间@sxgkd-info
+DTSTAMP:20260601T034530Z
+DTSTART;TZID=Asia/Shanghai:20260526T143000
+DTEND;TZID=Asia/Shanghai:20260526T180000
+SUMMARY:关于举办我校第三届心理游园会的通知
+DESCRIPTION:活动时间: 2026-05-26 14:30-18:00\\n学生工作部通知举办第三届心理游园会，面向各学院组织心理健康教育活动，旨在创新育人形式、涵养积极向上校园风气，助力学生身心健康发展。活动地点包含西区同心广场、中区步行街和东区技能广场，通知列出多个学院承办的互动项目。\\nhttps://xsgzb.sxgkd.edu.cn/info/1028/4030.htm
+URL:https://xsgzb.sxgkd.edu.cn/info/1028/4030.htm
+END:VEVENT
+END:VCALENDAR
