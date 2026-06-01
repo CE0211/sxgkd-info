@@ -362,6 +362,68 @@
       .month-body { padding: 0 10px 10px; }
       .category-tag { font-size: 11px; padding: 3px 7px; }
     }
+
+    .notice-block {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      scroll-margin-top: 16px;
+    }
+    .unit-group {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface-soft);
+      margin-top: 12px;
+      overflow: hidden;
+    }
+    .unit-group > summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px;
+      font-weight: 950;
+      color: var(--ink);
+    }
+    .unit-group > summary::-webkit-details-marker { display: none; }
+    .unit-group > summary::before { content: "›"; transition: transform .16s ease; }
+    .unit-group[open] > summary::before { transform: rotate(90deg); }
+    .unit-group > summary span { margin-right: auto; }
+    .unit-group > summary strong,
+    .scope-head strong {
+      display: inline-grid;
+      min-width: 28px;
+      height: 28px;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--accent-strong);
+      font-size: 13px;
+    }
+    .unit-body { padding: 0 12px 12px; }
+    .scope-group {
+      border-top: 1px solid var(--line);
+      padding: 12px 0;
+    }
+    .scope-group:first-of-type { border-top: 0; }
+    .scope-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 950;
+      margin-bottom: 10px;
+    }
+    .scope-head span { margin-right: auto; }
+    @media (max-width: 640px) {
+      .notice-block { padding: 14px; }
+      .unit-group > summary { padding: 10px; }
+      .unit-body { padding: 0 10px 10px; }
+    }
 </style>
 </head>
 <body>
@@ -369,53 +431,16 @@
     <section class="hero">
       <p class="eyebrow">历史归档</p>
       <h1>历史通知</h1>
-      <p class="hero-copy">上周及更早的通知按月份卡片收纳，每个月分为四个周，标题后保留原分类标签。</p>
+      <p class="hero-copy">历史通知按月份卡片和四个周收纳；每周内先放校级通知，再按学院归组二级学院通知。</p>
       <div class="source-row"><a href="index.html">返回首页</a></div>
     </section>
 <details class="month-card" open>
   <summary><span>2026年5月</span><strong>15</strong></summary>
   <div class="month-body"><details class="week-group" open>
   <summary><span>5月第一周</span><strong>5</strong></summary>
-  <div class="notice-list"><article class="notice-card other is-new">
-  <div class="notice-topline">
-    <span>2026-05-07</span>
-    <span>工程管理学院 / 通知公告</span>
-  </div>
-  <div class="notice-title-row">
-    <a class="notice-title" href="https://gcglxy.sxgkd.edu.cn/info/1501/9353.htm" target="_blank" rel="noreferrer">2026年春季学期“智能材料与器件”微专业招生简章0506</a>
-    <span class="category-tag other">其他通知</span>
-    <span class="new-badge">新</span>
-  </div>
-
-  <p>工程管理学院发布“智能材料与器件”微专业招生简章，面向校内土木工程检测技术、建设工程管理、工程造价、现代物业管理、智能建造工程、建筑工程技术、工程监理等相关专业本专科在读学生。微专业利用课余、周末或寒暑假学习，修满学分且考核合格后可获学校官方微专业结业证书，并提供实习和就业推荐通道。</p>
-  <div class="attachments"><strong>附件</strong><a href="https://gcglxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&amp;owner=1831473813&amp;wbfileid=E1C3518E399A6F77B6052F1F581A012F" target="_blank" rel="noreferrer">附件1：智能材料与器件微专业报名表.docx</a></div>
-</article><article class="notice-card activity is-new">
-  <div class="notice-topline">
-    <span>2026-05-07</span>
-    <span>计算机工程学院 / 通知公告</span>
-  </div>
-  <div class="notice-title-row">
-    <a class="notice-title" href="https://jsjgcxy.sxgkd.edu.cn/info/1003/14283.htm" target="_blank" rel="noreferrer">关于举办2026年山西工程科技职业大学5G组网与运维的通知</a>
-    <span class="category-tag activity">竞赛活动</span>
-    <span class="new-badge">新</span>
-  </div>
-  <div class="time-hints"><span><strong>报名截止</strong>2026-05-11</span><span><strong>竞赛时间</strong>2026-05-12 14:30-16:30</span></div>
-  <p>计算机工程学院承办2026年5G组网与运维技能竞赛，面向校内学生个人参赛，竞赛题型参考5G组网与运维国赛、省赛操作技能模块。比赛地点为9号实训楼303、304实训室，原则上不超过40人参赛，表现优异者将优先推荐参加省赛。</p>
-  <div class="attachments"><strong>附件</strong><span class="muted">无附件</span></div>
-</article><article class="notice-card activity is-new">
-  <div class="notice-topline">
-    <span>2026-05-07</span>
-    <span>工程管理学院 / 通知公告</span>
-  </div>
-  <div class="notice-title-row">
-    <a class="notice-title" href="https://gcglxy.sxgkd.edu.cn/info/1501/9333.htm" target="_blank" rel="noreferrer">关于举办2026年山西工程科技职业大学建设工程数字化计量与计价技能竞赛的通知</a>
-    <span class="category-tag activity">竞赛活动</span>
-    <span class="new-badge">新</span>
-  </div>
-  <div class="time-hints"><span><strong>报名截止</strong>2026-05-11</span><span><strong>竞赛时间</strong>2026-05-12 14:30-18:00</span></div>
-  <p>工程管理学院承办2026年建设工程数字化计量与计价技能竞赛，面向校内学生个人参赛，竞赛内容参考国赛、省赛相关模块。比赛地点为产教融合楼510、512，成绩由广联达软件考试系统打分并经评审组复核，表现优异者将优先推荐参加省赛或推荐就业单位。</p>
-  <div class="attachments"><strong>附件</strong><a href="https://gcglxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&amp;owner=1831473813&amp;wbfileid=57EE95B33702EFD1C59CC6830CADF2BC" target="_blank" rel="noreferrer">附件：建设工程数字化计量与计价技能竞赛报名表.doc</a></div>
-</article><article class="notice-card exam">
+  <div class="scope-group">
+  <div class="scope-head"><span>校级通知</span><strong>2</strong></div>
+  <div class="notice-list"><article class="notice-card exam">
   <div class="notice-topline">
     <span>2026-05-07</span>
     <span>招生信息网 / 招生快讯</span>
@@ -442,9 +467,68 @@
   <p>校团委发布5月4日至5月10日学生社团活动预告，内容包括升旗仪式、创意手作、配音、朗诵、公益思政、魔方教学、跨境选品、轮滑、古建纸模、工具讲解等社团活动。页面提供每项活动的时间和地点，方便学生选择参加。</p>
   <div class="attachments"><strong>附件</strong><span class="muted">无附件</span></div>
 </article></div>
+</div>
+<div class="scope-group">
+  <div class="scope-head"><span>学院通知</span><strong>3</strong></div>
+  <details class="unit-group" open>
+  <summary><span>工程管理学院</span><strong>2</strong></summary>
+  <div class="unit-body"><details class="day-group" open>
+  <summary><span>2026-05-07</span><strong>2</strong></summary>
+  <div class="notice-list"><article class="notice-card other is-new">
+  <div class="notice-topline">
+    <span>2026-05-07</span>
+    <span>工程管理学院 / 通知公告</span>
+  </div>
+  <div class="notice-title-row">
+    <a class="notice-title" href="https://gcglxy.sxgkd.edu.cn/info/1501/9353.htm" target="_blank" rel="noreferrer">2026年春季学期“智能材料与器件”微专业招生简章0506</a>
+    <span class="category-tag other">其他通知</span>
+    <span class="new-badge">新</span>
+  </div>
+
+  <p>工程管理学院发布“智能材料与器件”微专业招生简章，面向校内土木工程检测技术、建设工程管理、工程造价、现代物业管理、智能建造工程、建筑工程技术、工程监理等相关专业本专科在读学生。微专业利用课余、周末或寒暑假学习，修满学分且考核合格后可获学校官方微专业结业证书，并提供实习和就业推荐通道。</p>
+  <div class="attachments"><strong>附件</strong><a href="https://gcglxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&amp;owner=1831473813&amp;wbfileid=E1C3518E399A6F77B6052F1F581A012F" target="_blank" rel="noreferrer">附件1：智能材料与器件微专业报名表.docx</a></div>
+</article><article class="notice-card activity is-new">
+  <div class="notice-topline">
+    <span>2026-05-07</span>
+    <span>工程管理学院 / 通知公告</span>
+  </div>
+  <div class="notice-title-row">
+    <a class="notice-title" href="https://gcglxy.sxgkd.edu.cn/info/1501/9333.htm" target="_blank" rel="noreferrer">关于举办2026年山西工程科技职业大学建设工程数字化计量与计价技能竞赛的通知</a>
+    <span class="category-tag activity">竞赛活动</span>
+    <span class="new-badge">新</span>
+  </div>
+  <div class="time-hints"><span><strong>报名截止</strong>2026-05-11</span><span><strong>竞赛时间</strong>2026-05-12 14:30-18:00</span></div>
+  <p>工程管理学院承办2026年建设工程数字化计量与计价技能竞赛，面向校内学生个人参赛，竞赛内容参考国赛、省赛相关模块。比赛地点为产教融合楼510、512，成绩由广联达软件考试系统打分并经评审组复核，表现优异者将优先推荐参加省赛或推荐就业单位。</p>
+  <div class="attachments"><strong>附件</strong><a href="https://gcglxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&amp;owner=1831473813&amp;wbfileid=57EE95B33702EFD1C59CC6830CADF2BC" target="_blank" rel="noreferrer">附件：建设工程数字化计量与计价技能竞赛报名表.doc</a></div>
+</article></div>
+</details></div>
+</details>
+<details class="unit-group" open>
+  <summary><span>计算机工程学院</span><strong>1</strong></summary>
+  <div class="unit-body"><details class="day-group" open>
+  <summary><span>2026-05-07</span><strong>1</strong></summary>
+  <div class="notice-list"><article class="notice-card activity is-new">
+  <div class="notice-topline">
+    <span>2026-05-07</span>
+    <span>计算机工程学院 / 通知公告</span>
+  </div>
+  <div class="notice-title-row">
+    <a class="notice-title" href="https://jsjgcxy.sxgkd.edu.cn/info/1003/14283.htm" target="_blank" rel="noreferrer">关于举办2026年山西工程科技职业大学5G组网与运维的通知</a>
+    <span class="category-tag activity">竞赛活动</span>
+    <span class="new-badge">新</span>
+  </div>
+  <div class="time-hints"><span><strong>报名截止</strong>2026-05-11</span><span><strong>竞赛时间</strong>2026-05-12 14:30-16:30</span></div>
+  <p>计算机工程学院承办2026年5G组网与运维技能竞赛，面向校内学生个人参赛，竞赛题型参考5G组网与运维国赛、省赛操作技能模块。比赛地点为9号实训楼303、304实训室，原则上不超过40人参赛，表现优异者将优先推荐参加省赛。</p>
+  <div class="attachments"><strong>附件</strong><span class="muted">无附件</span></div>
+</article></div>
+</details></div>
+</details>
+</div>
 </details>
 <details class="week-group" open>
   <summary><span>5月第二周</span><strong>4</strong></summary>
+  <div class="scope-group">
+  <div class="scope-head"><span>校级通知</span><strong>4</strong></div>
   <div class="notice-list"><article class="notice-card life is-new">
   <div class="notice-topline">
     <span>2026-05-14</span>
@@ -498,9 +582,16 @@
   <p>公告说明学校2026年山西省专升本专项批招生录取工作已结束，录取查询同步开放。考生可在招生信息网“录取查询”中输入14位考生号、姓名和身份证号查询，页面列出各专业计划数、录取数、最高分和最低分。</p>
   <div class="attachments"><strong>附件</strong><span class="muted">无附件</span></div>
 </article></div>
+</div>
+<div class="scope-group">
+  <div class="scope-head"><span>学院通知</span><strong>0</strong></div>
+  <div class="empty-state">暂无学院通知</div>
+</div>
 </details>
 <details class="week-group" open>
   <summary><span>5月第三周</span><strong>2</strong></summary>
+  <div class="scope-group">
+  <div class="scope-head"><span>校级通知</span><strong>2</strong></div>
   <div class="notice-list"><article class="notice-card exam">
   <div class="notice-topline">
     <span>2026-05-21</span>
@@ -528,9 +619,16 @@
   <p>校团委发布5月18日至5月25日学生社团活动预告，包含升旗仪式、思政教育、民谣合唱、不织布DIY、导游证经验分享、心理委员技能大赛、篮球、征集、礼仪、金融安全、书法和观影等活动。通知以列表形式给出社团、指导单位、活动时间和地点。</p>
   <div class="attachments"><strong>附件</strong><span class="muted">无附件</span></div>
 </article></div>
+</div>
+<div class="scope-group">
+  <div class="scope-head"><span>学院通知</span><strong>0</strong></div>
+  <div class="empty-state">暂无学院通知</div>
+</div>
 </details>
 <details class="week-group" open>
   <summary><span>5月第四周</span><strong>4</strong></summary>
+  <div class="scope-group">
+  <div class="scope-head"><span>校级通知</span><strong>4</strong></div>
   <div class="notice-list"><article class="notice-card award is-new">
   <div class="notice-topline">
     <span>2026-05-29</span>
@@ -584,6 +682,11 @@
   <p>面向2026级专升本考生，提醒邮寄档案前按要求填写并粘贴相关资料，未按要求处理的档案将退回原学校。页面给出档案馆联系人、联系电话、邮寄地址、邮政编码，以及档案袋封面需填写的考生号、姓名、性别、联系电话和录取专业等信息。</p>
   <div class="attachments"><strong>附件</strong><span class="muted">无附件</span></div>
 </article></div>
+</div>
+<div class="scope-group">
+  <div class="scope-head"><span>学院通知</span><strong>0</strong></div>
+  <div class="empty-state">暂无学院通知</div>
+</div>
 </details></div>
 </details>
     <p class="site-note">非学校官方，仅整理公开信息，原文以官网为准。</p>

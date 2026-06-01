@@ -362,6 +362,68 @@
       .month-body { padding: 0 10px 10px; }
       .category-tag { font-size: 11px; padding: 3px 7px; }
     }
+
+    .notice-block {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      scroll-margin-top: 16px;
+    }
+    .unit-group {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface-soft);
+      margin-top: 12px;
+      overflow: hidden;
+    }
+    .unit-group > summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px;
+      font-weight: 950;
+      color: var(--ink);
+    }
+    .unit-group > summary::-webkit-details-marker { display: none; }
+    .unit-group > summary::before { content: "›"; transition: transform .16s ease; }
+    .unit-group[open] > summary::before { transform: rotate(90deg); }
+    .unit-group > summary span { margin-right: auto; }
+    .unit-group > summary strong,
+    .scope-head strong {
+      display: inline-grid;
+      min-width: 28px;
+      height: 28px;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--accent-strong);
+      font-size: 13px;
+    }
+    .unit-body { padding: 0 12px 12px; }
+    .scope-group {
+      border-top: 1px solid var(--line);
+      padding: 12px 0;
+    }
+    .scope-group:first-of-type { border-top: 0; }
+    .scope-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 950;
+      margin-bottom: 10px;
+    }
+    .scope-head span { margin-right: auto; }
+    @media (max-width: 640px) {
+      .notice-block { padding: 14px; }
+      .unit-group > summary { padding: 10px; }
+      .unit-body { padding: 0 10px 10px; }
+    }
 </style>
 </head>
 <body>
@@ -371,7 +433,7 @@
         <div>
           <p class="eyebrow">公开通知整理</p>
           <h1 id="page-title">山西工程科技职业大学信息门户</h1>
-          <p class="hero-copy">聚合学校公开通知，按学业考试、竞赛活动、奖助评优、校园生活、假期安排和其他通知分类，方便快速查看原文。</p>
+          <p class="hero-copy">校级通知集中展示，二级学院通知按学院归组；分类以标签保留，方便快速判断内容类型。</p>
         </div>
         <div class="status-card">
           <div class="status-line"><p class="status-label">最后更新</p><p class="status-value">2026-06-01 12:55:26</p></div>
@@ -386,43 +448,13 @@
     </section>
 
     <div class="layout">
-<section class="category-section">
+<section class="notice-block school-block">
   <div class="section-head">
     <div>
-      <p class="section-kicker">分类</p>
-      <h2>学业考试</h2>
+      <p class="section-kicker">校级</p>
+      <h2>校级通知</h2>
     </div>
-    <span class="section-count exam">0</span>
-  </div>
-  <div class="empty-state">本周暂无已记录通知</div>
-</section>
-<section class="category-section">
-  <div class="section-head">
-    <div>
-      <p class="section-kicker">分类</p>
-      <h2>竞赛活动</h2>
-    </div>
-    <span class="section-count activity">0</span>
-  </div>
-  <div class="empty-state">本周暂无已记录通知</div>
-</section>
-<section class="category-section">
-  <div class="section-head">
-    <div>
-      <p class="section-kicker">分类</p>
-      <h2>奖助评优</h2>
-    </div>
-    <span class="section-count award">0</span>
-  </div>
-  <div class="empty-state">本周暂无已记录通知</div>
-</section>
-<section class="category-section">
-  <div class="section-head">
-    <div>
-      <p class="section-kicker">分类</p>
-      <h2>校园生活</h2>
-    </div>
-    <span class="section-count life">1</span>
+    <span class="section-count other">1</span>
   </div>
   <details class="day-group" open>
   <summary><span>2026-06-01</span><strong>1</strong></summary>
@@ -433,7 +465,7 @@
   </div>
   <div class="notice-title-row">
     <a class="notice-title" href="https://hqbwb.sxgkd.edu.cn/info/1432/4792.htm" target="_blank" rel="noreferrer">电动车安全文明骑行倡议书</a>
-
+    <span class="category-tag life">校园生活</span>
     <span class="new-badge">新</span>
   </div>
 
@@ -442,25 +474,15 @@
 </article></div>
 </details>
 </section>
-<section class="category-section">
+<section class="notice-block college-block">
   <div class="section-head">
     <div>
-      <p class="section-kicker">分类</p>
-      <h2>假期安排</h2>
-    </div>
-    <span class="section-count holiday">0</span>
-  </div>
-  <div class="empty-state">本周暂无已记录通知</div>
-</section>
-<section class="category-section">
-  <div class="section-head">
-    <div>
-      <p class="section-kicker">分类</p>
-      <h2>其他通知</h2>
+      <p class="section-kicker">二级学院</p>
+      <h2>学院通知</h2>
     </div>
     <span class="section-count other">0</span>
   </div>
-  <div class="empty-state">本周暂无已记录通知</div>
+  <div class="empty-state">本周暂无学院通知</div>
 </section>
     </div>
 
@@ -468,7 +490,7 @@
   <div>
     <p class="section-kicker">历史归档</p>
     <h2>更早通知已收纳</h2>
-    <p>上周及更早的通知按月份卡片和四个周收纳。</p>
+    <p>历史通知按月份和周收纳，并区分校级通知与学院通知。</p>
   </div>
   <a href="history.html">查看历史归档 <strong>15</strong></a>
 </section>
