@@ -17,8 +17,8 @@
       --accent: #0f766e;
       --accent-strong: #0b5f59;
       --exam: #2563eb;
-      --contest: #7c3aed;
-      --grant: #b45309;
+      --activity: #7c3aed;
+      --award: #b45309;
       --holiday: #15803d;
       --life: #d14b2f;
       --other: #475569;
@@ -43,7 +43,6 @@
       }
     }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       background: var(--bg);
@@ -60,13 +59,13 @@
       margin: 0 auto;
       padding: calc(20px + env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) calc(40px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
     }
-    .hero, .search-panel, .category-section, .history-section, .history-footer {
+    .hero, .category-section, .history-section, .history-footer {
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
-    .hero { padding: clamp(18px, 4vw, 32px); margin-bottom: 14px; }
+    .hero { padding: clamp(18px, 4vw, 32px); margin-bottom: 16px; }
     .hero-top {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
@@ -128,60 +127,6 @@
       background: var(--surface);
       color: var(--muted);
     }
-    .search-panel {
-      padding: 12px;
-      margin-bottom: 16px;
-    }
-    .search-panel label {
-      display: block;
-      margin: 0 0 6px;
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 800;
-    }
-    .search-grid {
-      display: grid;
-      grid-template-columns: minmax(260px, 1fr) 170px auto auto;
-      gap: 10px;
-      align-items: end;
-    }
-    .search-panel input[type="search"], .search-panel select {
-      width: 100%;
-      height: 42px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--surface);
-      color: var(--ink);
-      font: inherit;
-      padding: 0 12px;
-    }
-    .toggle {
-      height: 42px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 7px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 0 12px;
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 800;
-      white-space: nowrap;
-      background: color-mix(in srgb, var(--surface) 82%, var(--bg));
-    }
-    .clear-button {
-      height: 42px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--surface);
-      color: var(--muted);
-      font: inherit;
-      font-size: 13px;
-      font-weight: 800;
-      padding: 0 12px;
-      cursor: pointer;
-    }
     .layout { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
     .category-section, .history-section { padding: 16px; scroll-margin-top: 16px; }
     .section-head {
@@ -205,8 +150,8 @@
       font-weight: 800;
     }
     .section-count.exam { background: var(--exam); }
-    .section-count.contest { background: var(--contest); }
-    .section-count.grant { background: var(--grant); }
+    .section-count.activity { background: var(--activity); }
+    .section-count.award { background: var(--award); }
     .section-count.holiday { background: var(--holiday); }
     .section-count.life { background: var(--life); }
     .section-count.other { background: var(--other); }
@@ -255,6 +200,12 @@
       border-color: color-mix(in srgb, var(--new) 42%, var(--line));
       border-left-color: var(--new);
     }
+    .notice-card.exam { border-left-color: var(--exam); }
+    .notice-card.activity { border-left-color: var(--activity); }
+    .notice-card.award { border-left-color: var(--award); }
+    .notice-card.holiday { border-left-color: var(--holiday); }
+    .notice-card.life { border-left-color: var(--life); }
+    .notice-card.other { border-left-color: var(--other); }
     .notice-topline { display: flex; flex-wrap: wrap; gap: 6px 10px; margin-bottom: 7px; color: var(--muted); font-size: 12px; font-weight: 700; }
     .notice-title-row { display: flex; gap: 8px; align-items: flex-start; }
     .notice-title { font-size: 16px; font-weight: 800; line-height: 1.42; }
@@ -298,6 +249,10 @@
       justify-content: space-between;
       align-items: center;
       gap: 14px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
     }
     .history-footer p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
     .history-footer a {
@@ -309,23 +264,18 @@
       font-weight: 900;
     }
     .site-note { margin-top: 18px; color: var(--muted); font-size: 13px; text-align: center; }
-    .hidden-by-filter { display: none !important; }
     @media (max-width: 980px) {
       .hero-top { grid-template-columns: 1fr; }
-      .search-grid { grid-template-columns: 1fr 160px; }
-      .search-field { grid-column: 1 / -1; }
       .layout { grid-template-columns: 1fr; }
     }
     @media (max-width: 640px) {
       .page { padding-left: max(12px, env(safe-area-inset-left)); padding-right: max(12px, env(safe-area-inset-right)); }
-      .hero, .search-panel, .category-section, .history-footer { padding: 14px; }
+      .hero, .category-section, .history-footer { padding: 14px; }
       .status-line { display: block; }
       .status-value { text-align: left; font-size: 16px; }
       .metrics { max-width: none; gap: 8px; }
       .metric { min-height: 78px; padding: 10px; }
       .metric strong { font-size: 26px; }
-      .search-grid { grid-template-columns: 1fr; gap: 9px; }
-      .toggle, .clear-button { justify-content: center; width: 100%; }
       .source-row {
         flex-wrap: nowrap;
         overflow-x: auto;
@@ -363,7 +313,7 @@
   <summary><span>2026-05-18 至 2026-05-24</span><strong>2</strong></summary>
   <details class="day-group">
   <summary><span>2026-05-22</span><strong>1</strong></summary>
-  <div class="notice-list"><article class="notice-card exam" data-category="考试" data-new="0" data-search="专升本档案邮寄说明 面向2026级专升本考生，提醒邮寄档案前按要求填写并粘贴相关资料，未按要求处理的档案将退回原学校。页面给出档案馆联系人、联系电话、邮寄地址、邮政编码，以及档案袋封面需填写的考生号、姓名、性别、联系电话和录取专业等信息。 考试 招生信息网 / 招生快讯 2026-05-22">
+  <div class="notice-list"><article class="notice-card exam">
   <div class="notice-topline">
     <span>2026-05-22</span>
     <span>招生信息网 / 招生快讯</span>
@@ -379,7 +329,7 @@
 </details>
 <details class="day-group">
   <summary><span>2026-05-21</span><strong>1</strong></summary>
-  <div class="notice-list"><article class="notice-card exam" data-category="考试" data-new="0" data-search="山西工程科技职业大学2026年录取公告（二）（山西 专升本普通批） 公告说明学校2026年山西省专升本普通批招生录取工作已结束，录取查询已同步开放。考生可在招生信息网“录取查询”中输入14位考生号、姓名和身份证号查询，页面同时列出各专业计划数、录取数及最高分、最低分等录取情况。 考试 招生信息网 / 招生快讯 2026-05-21">
+  <div class="notice-list"><article class="notice-card exam">
   <div class="notice-topline">
     <span>2026-05-21</span>
     <span>招生信息网 / 招生快讯</span>
