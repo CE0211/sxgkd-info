@@ -25,9 +25,9 @@
     .fold-summary { width:100%; display:grid; grid-template-columns:minmax(0,1fr) auto; gap:5px 10px; align-items:center; border:0; border-radius:0; background:transparent; color:inherit; cursor:pointer; padding:12px; text-align:left; max-height:120px; opacity:1; overflow:hidden; transition:max-height .28s cubic-bezier(.2,.8,.2,1), padding .28s cubic-bezier(.2,.8,.2,1), opacity .18s ease; } .fold-summary:hover .fold-title { color:var(--accent-strong); } .fold-title { min-width:0; font-size:15px; line-height:1.45; font-weight:900; overflow-wrap:anywhere; } .fold-badges { display:inline-flex; flex-wrap:wrap; justify-content:flex-end; align-items:center; gap:6px; } .fold-meta { grid-column:1 / -1; color:var(--muted); font-size:12px; font-weight:700; overflow-wrap:anywhere; } .notice-fold.is-open .fold-summary { max-height:0; padding-top:0; padding-bottom:0; opacity:0; pointer-events:none; }
     .fold-body { height:0; opacity:0; overflow:hidden; transform:translateY(-4px); transition:height .3s cubic-bezier(.2,.8,.2,1), opacity .2s ease, transform .3s cubic-bezier(.2,.8,.2,1); } .notice-fold.is-open .fold-body { opacity:1; transform:translateY(0); }
     .notice-card { border:0; border-left:4px solid var(--other); border-radius:0; padding:14px; background:transparent; overflow-wrap:anywhere; } .notice-card.is-new { background:color-mix(in srgb,var(--new-soft) 62%,transparent); } .notice-card.exam { border-left-color:var(--exam); } .notice-card.activity { border-left-color:var(--activity); } .notice-card.award { border-left-color:var(--award); } .notice-card.holiday { border-left-color:var(--holiday); } .notice-card.life { border-left-color:var(--life); } .notice-card.other { border-left-color:var(--other); }
-    .notice-topline { display:flex; flex-wrap:wrap; gap:6px 10px; margin-bottom:7px; color:var(--muted); font-size:12px; font-weight:700; } .notice-title-row { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:8px; align-items:start; } .notice-title { min-width:0; font-size:16px; font-weight:900; line-height:1.42; overflow-wrap:anywhere; } .notice-badges { display:inline-flex; flex-wrap:wrap; justify-content:flex-end; align-items:center; gap:6px; }
+    .notice-topline { display:flex; flex-wrap:wrap; gap:6px 10px; margin-bottom:7px; color:var(--muted); font-size:12px; font-weight:700; } .notice-title-row { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:8px; align-items:start; } .notice-title { min-width:0; font-size:16px; font-weight:900; line-height:1.42; overflow-wrap:anywhere; } .notice-badges { display:inline-flex; flex:none; flex-wrap:nowrap; justify-content:flex-end; align-items:center; gap:6px; }
     .category-tag { display:inline-flex; align-items:center; min-height:24px; border-radius:999px; padding:3px 9px; font-size:12px; font-weight:900; color:#fff; white-space:nowrap; } .category-tag.exam { background:var(--exam); } .category-tag.activity { background:var(--activity); } .category-tag.award { background:var(--award); } .category-tag.life { background:var(--life); } .category-tag.holiday { background:var(--holiday); } .category-tag.other { background:var(--other); } .new-badge { flex:none; border-radius:999px; background:var(--new); color:#fff; padding:1px 8px; font-size:12px; font-weight:900; line-height:20px; white-space:nowrap; }
-    .time-hints { display:flex; flex-wrap:wrap; gap:6px; margin-top:9px; } .time-hints span { border-radius:999px; background:color-mix(in srgb,var(--accent) 11%,var(--surface)); border:1px solid color-mix(in srgb,var(--accent) 22%,var(--line)); color:var(--accent-strong); padding:3px 8px; font-size:12px; font-weight:700; } .time-hints strong { margin-right:4px; } .notice-card p { margin:8px 0 10px; color:color-mix(in srgb,var(--ink) 84%,var(--muted)); font-size:14px; } .attachments { display:flex; flex-wrap:wrap; gap:6px; color:var(--muted); font-size:13px; } .attachments strong { color:var(--ink); } .fold-close { margin-top:10px; border:1px solid var(--line); border-radius:var(--radius); background:var(--surface); color:var(--muted); cursor:pointer; padding:6px 10px; font:inherit; font-size:13px; font-weight:800; } .fold-close:hover { color:var(--accent-strong); border-color:color-mix(in srgb,var(--accent) 40%,var(--line)); }
+    .time-hints { display:flex; flex-wrap:wrap; gap:6px; margin-top:9px; } .time-hints span { border-radius:999px; background:color-mix(in srgb,var(--accent) 11%,var(--surface)); border:1px solid color-mix(in srgb,var(--accent) 22%,var(--line)); color:var(--accent-strong); padding:3px 8px; font-size:12px; font-weight:700; } .time-hints strong { margin-right:4px; } .notice-card p { margin:8px 0 10px; color:color-mix(in srgb,var(--ink) 84%,var(--muted)); font-size:14px; } .attachments { display:flex; flex-wrap:wrap; gap:6px; color:var(--muted); font-size:13px; } .attachments strong { color:var(--ink); } .fold-close { flex:none; width:24px; height:24px; display:inline-grid; place-items:center; margin:0; border:1px solid var(--line); border-radius:999px; background:var(--surface); color:var(--muted); cursor:pointer; padding:0; font:inherit; font-size:15px; font-weight:900; line-height:1; } .fold-close:hover { color:var(--accent-strong); border-color:color-mix(in srgb,var(--accent) 40%,var(--line)); }
     .muted { color:var(--muted); } .empty-state { border:1px dashed var(--line); border-radius:var(--radius); padding:18px; color:var(--muted); text-align:center; background:color-mix(in srgb,var(--surface) 70%,var(--bg)); } .empty-state.compact { margin:4px 0 12px; padding:12px; }
     .history-footer { margin-top:18px; padding:16px; display:flex; justify-content:space-between; align-items:center; gap:14px; } .history-footer p { margin:4px 0 0; color:var(--muted); font-size:14px; } .history-footer a { flex:none; border-radius:var(--radius); background:var(--accent); color:#fff; padding:9px 12px; font-weight:900; }
     .site-note { margin-top:18px; color:var(--muted); font-size:13px; text-align:center; } .month-card { border:1px solid var(--line); border-radius:var(--radius); background:var(--surface); margin-bottom:14px; overflow:hidden; } .month-card > summary,.week-group > summary,.unit-group > summary { list-style:none; cursor:pointer; display:flex; align-items:center; gap:10px; font-weight:950; color:var(--ink); } .month-card > summary { padding:16px; background:var(--surface-soft); } .week-group > summary { padding:10px 2px; color:var(--muted); } .unit-group > summary { padding:11px 12px; } .month-card > summary::-webkit-details-marker,.week-group > summary::-webkit-details-marker,.unit-group > summary::-webkit-details-marker { display:none; } .month-card > summary::before,.week-group > summary::before,.unit-group > summary::before { content:">"; transition:transform .16s ease; } .month-card[open] > summary::before,.week-group[open] > summary::before,.unit-group[open] > summary::before { transform:rotate(90deg); } .month-card > summary span,.week-group > summary span,.unit-group > summary span { margin-right:auto; } .month-card > summary strong,.week-group > summary strong,.unit-group > summary strong { display:inline-grid; min-width:30px; height:30px; place-items:center; border-radius:999px; background:var(--surface); color:var(--accent-strong); font-size:13px; } .month-body { padding:0 14px 14px; } .week-group { border-top:1px solid var(--line); padding-top:6px; } .week-body { padding-bottom:10px; } .unit-group { border:1px solid var(--line); border-radius:var(--radius); background:var(--surface-soft); margin-top:10px; overflow:hidden; } .unit-body { padding:0 12px 12px; }
@@ -48,11 +48,10 @@
   <div class="fold-body" id="notice-fold-school-0-w1-0" hidden>
     <article class="notice-card exam">
       <div class="notice-topline"><span>2026-05-07</span><span>招生信息网 / 招生快讯</span></div>
-      <div class="notice-title-row"><a class="notice-title" href="https://zsxxw.sxgkd.edu.cn/info/1010/4400.htm" target="_blank" rel="noreferrer">山西省2026年普通高校专升本考试网上填报志愿公告</a><span class="notice-badges"><span class="category-tag exam">学业考试</span></span></div>
+      <div class="notice-title-row"><a class="notice-title" href="https://zsxxw.sxgkd.edu.cn/info/1010/4400.htm" target="_blank" rel="noreferrer">山西省2026年普通高校专升本考试网上填报志愿公告</a><span class="notice-badges"><span class="category-tag exam">学业考试</span><button class="fold-close" type="button" aria-label="收起通知" title="收起"><span aria-hidden="true">↑</span></button></span></div>
       <div class="time-hints"><span><strong>志愿填报时间</strong>2026-05-07 08:00 至 2026-05-09 18:00</span></div>
       <p>公告说明山西省2026年普通高校专升本考试网上填报志愿安排，填报时间为5月7日8:00至5月9日18:00，逾期不予填报。内容包含填报批次、填报条件、志愿设置、登录方式、密码重置和注意事项，提醒考生按流程确认提交并妥善保管个人密码。</p>
       <div class="attachments"><strong>附件</strong><span class="muted">无附件</span></div>
-      <button class="fold-close" type="button">收起</button>
     </article>
   </div>
 </section><section class="notice-fold activity is-new" data-fold>
@@ -64,11 +63,10 @@
   <div class="fold-body" id="notice-fold-school-0-w1-1" hidden>
     <article class="notice-card activity is-new">
       <div class="notice-topline"><span>2026-05-06</span><span>校团委 / 学生社团</span></div>
-      <div class="notice-title-row"><a class="notice-title" href="https://tw.sxgkd.edu.cn/info/1312/13212.htm" target="_blank" rel="noreferrer">工科大学生社团活动预告（5.4-5.10）</a><span class="notice-badges"><span class="new-badge">新</span><span class="category-tag activity">竞赛活动</span></span></div>
+      <div class="notice-title-row"><a class="notice-title" href="https://tw.sxgkd.edu.cn/info/1312/13212.htm" target="_blank" rel="noreferrer">工科大学生社团活动预告（5.4-5.10）</a><span class="notice-badges"><span class="new-badge">新</span><span class="category-tag activity">竞赛活动</span><button class="fold-close" type="button" aria-label="收起通知" title="收起"><span aria-hidden="true">↑</span></button></span></div>
       <div class="time-hints"><span><strong>活动时间</strong>2026-05-04 至 2026-05-10</span></div>
       <p>校团委发布5月4日至5月10日学生社团活动预告，内容包括升旗仪式、创意手作、配音、朗诵、公益思政、魔方教学、跨境选品、轮滑、古建纸模、工具讲解等社团活动。页面提供每项活动的时间和地点，方便学生选择参加。</p>
       <div class="attachments"><strong>附件</strong><span class="muted">无附件</span></div>
-      <button class="fold-close" type="button">收起</button>
     </article>
   </div>
 </section></div></div></details><details class="week-group" open><summary><span>5月第二周</span><strong>4</strong></summary><div class="week-body"><div class="notice-list"><section class="notice-fold life is-new" data-fold>
@@ -80,11 +78,10 @@
   <div class="fold-body" id="notice-fold-school-0-w2-0" hidden>
     <article class="notice-card life is-new">
       <div class="notice-topline"><span>2026-05-14</span><span>后勤保障部（安全保卫部）/ 通知公告</span></div>
-      <div class="notice-title-row"><a class="notice-title" href="https://hqbwb.sxgkd.edu.cn/info/1432/4702.htm" target="_blank" rel="noreferrer">关于校内部分路段临时交通管控的通知</a><span class="notice-badges"><span class="new-badge">新</span><span class="category-tag life">校园生活</span></span></div>
+      <div class="notice-title-row"><a class="notice-title" href="https://hqbwb.sxgkd.edu.cn/info/1432/4702.htm" target="_blank" rel="noreferrer">关于校内部分路段临时交通管控的通知</a><span class="notice-badges"><span class="new-badge">新</span><span class="category-tag life">校园生活</span><button class="fold-close" type="button" aria-label="收起通知" title="收起"><span aria-hidden="true">↑</span></button></span></div>
       <div class="time-hints"><span><strong>交通管控时间</strong>2026-05-15 07:30 至开幕式结束</span></div>
       <p>安全保卫部通知因2026年春季田径运动会开幕式需要，对科技北路部分路段实施临时交通管控。管控范围为东起工程大道北口、西至劳动路北口，提醒过往车辆绕行科技东路和科技西路。</p>
       <div class="attachments"><strong>附件</strong><span class="muted">无附件</span></div>
-      <button class="fold-close" type="button">收起</button>
     </article>
   </div>
 </section><section class="notice-fold activity is-new" data-fold>
@@ -96,11 +93,10 @@
   <div class="fold-body" id="notice-fold-school-0-w2-1" hidden>
     <article class="notice-card activity is-new">
       <div class="notice-topline"><span>2026-05-12</span><span>校团委 / 学生社团</span></div>
-      <div class="notice-title-row"><a class="notice-title" href="https://tw.sxgkd.edu.cn/info/1312/13362.htm" target="_blank" rel="noreferrer">工科大学生社团活动预告（5.11-5.17）</a><span class="notice-badges"><span class="new-badge">新</span><span class="category-tag activity">竞赛活动</span></span></div>
+      <div class="notice-title-row"><a class="notice-title" href="https://tw.sxgkd.edu.cn/info/1312/13362.htm" target="_blank" rel="noreferrer">工科大学生社团活动预告（5.11-5.17）</a><span class="notice-badges"><span class="new-badge">新</span><span class="category-tag activity">竞赛活动</span><button class="fold-close" type="button" aria-label="收起通知" title="收起"><span aria-hidden="true">↑</span></button></span></div>
       <div class="time-hints"><span><strong>活动时间</strong>2026-05-11 至 2026-05-17</span></div>
       <p>校团委发布5月11日至5月17日学生社团活动预告，包含升旗仪式、合唱、跑步、工控学习、书法征集、心理咨询、古建筑研学、数学建模、创业实践、篮球、测量知识竞赛、金融科普等活动。页面逐项列出活动时间和地点，适合学生按需查看。</p>
       <div class="attachments"><strong>附件</strong><span class="muted">无附件</span></div>
-      <button class="fold-close" type="button">收起</button>
     </article>
   </div>
 </section><section class="notice-fold award" data-fold>
@@ -112,11 +108,10 @@
   <div class="fold-body" id="notice-fold-school-0-w2-2" hidden>
     <article class="notice-card award">
       <div class="notice-topline"><span>2026-05-12</span><span>学生工作部（武装部）/ 通知公告</span></div>
-      <div class="notice-title-row"><a class="notice-title" href="https://xsgzb.sxgkd.edu.cn/info/1028/3910.htm" target="_blank" rel="noreferrer">关于开展2026年我校学生资助诚信教育主题活动的通知</a><span class="notice-badges"><span class="category-tag award">奖助评优</span></span></div>
+      <div class="notice-title-row"><a class="notice-title" href="https://xsgzb.sxgkd.edu.cn/info/1028/3910.htm" target="_blank" rel="noreferrer">关于开展2026年我校学生资助诚信教育主题活动的通知</a><span class="notice-badges"><span class="category-tag award">奖助评优</span><button class="fold-close" type="button" aria-label="收起通知" title="收起"><span aria-hidden="true">↑</span></button></span></div>
       <div class="time-hints"><span><strong>活动集中开展</strong>2026-05 至 2026-06</span><span><strong>材料报送截止</strong>2026-05-28</span></div>
       <p>学生工作部通知开展2026年学生资助诚信教育主题活动，5月至6月集中开展，要求各学院围绕诚信教育、感恩励志教育、金融知识普及和防范非法金融活动等内容组织活动。各学院需在5月28日前报送活动总结报告和典型案例材料，推动资助育人与学生发展结合。</p>
       <div class="attachments"><strong>附件</strong><span class="muted">无附件</span></div>
-      <button class="fold-close" type="button">收起</button>
     </article>
   </div>
 </section><section class="notice-fold exam" data-fold>
@@ -128,10 +123,9 @@
   <div class="fold-body" id="notice-fold-school-0-w2-3" hidden>
     <article class="notice-card exam">
       <div class="notice-topline"><span>2026-05-12</span><span>招生信息网 / 招生快讯</span></div>
-      <div class="notice-title-row"><a class="notice-title" href="https://zsxxw.sxgkd.edu.cn/info/1010/4410.htm" target="_blank" rel="noreferrer">山西工程科技职业大学2026年录取公告（一）（山西 专升本专项批）</a><span class="notice-badges"><span class="category-tag exam">学业考试</span></span></div>
+      <div class="notice-title-row"><a class="notice-title" href="https://zsxxw.sxgkd.edu.cn/info/1010/4410.htm" target="_blank" rel="noreferrer">山西工程科技职业大学2026年录取公告（一）（山西 专升本专项批）</a><span class="notice-badges"><span class="category-tag exam">学业考试</span><button class="fold-close" type="button" aria-label="收起通知" title="收起"><span aria-hidden="true">↑</span></button></span></div>
       <p>公告说明学校2026年山西省专升本专项批招生录取工作已结束，录取查询同步开放。考生可在招生信息网“录取查询”中输入14位考生号、姓名和身份证号查询，页面列出各专业计划数、录取数、最高分和最低分。</p>
       <div class="attachments"><strong>附件</strong><span class="muted">无附件</span></div>
-      <button class="fold-close" type="button">收起</button>
     </article>
   </div>
 </section></div></div></details><details class="week-group" open><summary><span>5月第三周</span><strong>2</strong></summary><div class="week-body"><div class="notice-list"><section class="notice-fold exam" data-fold>
@@ -143,10 +137,9 @@
   <div class="fold-body" id="notice-fold-school-0-w3-0" hidden>
     <article class="notice-card exam">
       <div class="notice-topline"><span>2026-05-21</span><span>招生信息网 / 招生快讯</span></div>
-      <div class="notice-title-row"><a class="notice-title" href="https://zsxxw.sxgkd.edu.cn/info/1010/4430.htm" target="_blank" rel="noreferrer">山西工程科技职业大学2026年录取公告（二）（山西 专升本普通批）</a><span class="notice-badges"><span class="category-tag exam">学业考试</span></span></div>
+      <div class="notice-title-row"><a class="notice-title" href="https://zsxxw.sxgkd.edu.cn/info/1010/4430.htm" target="_blank" rel="noreferrer">山西工程科技职业大学2026年录取公告（二）（山西 专升本普通批）</a><span class="notice-badges"><span class="category-tag exam">学业考试</span><button class="fold-close" type="button" aria-label="收起通知" title="收起"><span aria-hidden="true">↑</span></button></span></div>
       <p>公告说明学校2026年山西省专升本普通批招生录取工作已结束，录取查询已同步开放。考生可在招生信息网“录取查询”中输入14位考生号、姓名和身份证号查询，页面同时列出各专业计划数、录取数及最高分、最低分等录取情况。</p>
       <div class="attachments"><strong>附件</strong><span class="muted">无附件</span></div>
-      <button class="fold-close" type="button">收起</button>
     </article>
   </div>
 </section><section class="notice-fold activity is-new" data-fold>
@@ -158,11 +151,10 @@
   <div class="fold-body" id="notice-fold-school-0-w3-1" hidden>
     <article class="notice-card activity is-new">
       <div class="notice-topline"><span>2026-05-18</span><span>校团委 / 学生社团</span></div>
-      <div class="notice-title-row"><a class="notice-title" href="https://tw.sxgkd.edu.cn/info/1312/13352.htm" target="_blank" rel="noreferrer">工科大学生社团活动预告（5.18-5.25）</a><span class="notice-badges"><span class="new-badge">新</span><span class="category-tag activity">竞赛活动</span></span></div>
+      <div class="notice-title-row"><a class="notice-title" href="https://tw.sxgkd.edu.cn/info/1312/13352.htm" target="_blank" rel="noreferrer">工科大学生社团活动预告（5.18-5.25）</a><span class="notice-badges"><span class="new-badge">新</span><span class="category-tag activity">竞赛活动</span><button class="fold-close" type="button" aria-label="收起通知" title="收起"><span aria-hidden="true">↑</span></button></span></div>
       <div class="time-hints"><span><strong>活动时间</strong>2026-05-18 至 2026-05-25</span></div>
       <p>校团委发布5月18日至5月25日学生社团活动预告，包含升旗仪式、思政教育、民谣合唱、不织布DIY、导游证经验分享、心理委员技能大赛、篮球、征集、礼仪、金融安全、书法和观影等活动。通知以列表形式给出社团、指导单位、活动时间和地点。</p>
       <div class="attachments"><strong>附件</strong><span class="muted">无附件</span></div>
-      <button class="fold-close" type="button">收起</button>
     </article>
   </div>
 </section></div></div></details><details class="week-group" open><summary><span>5月第四周</span><strong>4</strong></summary><div class="week-body"><div class="notice-list"><section class="notice-fold award is-new" data-fold>
@@ -174,11 +166,11 @@
   <div class="fold-body" id="notice-fold-school-0-w4-0" hidden>
     <article class="notice-card award is-new">
       <div class="notice-topline"><span>2026-05-29</span><span>校团委 / 通知公告</span></div>
-      <div class="notice-title-row"><a class="notice-title" href="https://tw.sxgkd.edu.cn/info/1352/13522.htm" target="_blank" rel="noreferrer">关于“山西青年创业奖”选拔推荐工作的通知</a><span class="notice-badges"><span class="new-badge">新</span><span class="category-tag award">奖助评优</span></span></div>
+      <div class="notice-title-row"><a class="notice-title" href="https://tw.sxgkd.edu.cn/info/1352/13522.htm" target="_blank" rel="noreferrer">关于“山西青年创业奖”选拔推荐工作的通知</a><span class="notice-badges"><span class="new-badge">新</span><span class="category-tag award">奖助评优</span><button class="fold-close" type="button" aria-label="收起通知" title="收起"><span aria-hidden="true">↑</span></button></span></div>
       <div class="time-hints"><span><strong>材料报送截止</strong>2026-06-01 12:00</span></div>
       <p>校团委转发“山西青年创业奖”选拔推荐工作通知，面向全校征集推荐人选，学校可推荐1名对象。通知要求符合条件的申报材料按部门或学院统一报送，电子版发送至校团委邮箱，纸质版报送至行政二号楼812办公室，逾期未报视为放弃。</p>
       <div class="attachments"><strong>附件</strong><a href="https://tw.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&amp;owner=1841493916&amp;wbfileid=03A73A5F3DFAFC26FD4E3B87571C5A16" target="_blank" rel="noreferrer">晋教人函〔2026〕87号_山西省教育厅关于“山西青年创业奖”选拔推荐工作的通知.pdf</a><a href="https://tw.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&amp;owner=1841493916&amp;wbfileid=329CE234104C5A329B8AE7CFE5DD0275" target="_blank" rel="noreferrer">相关附件表格（附件1-6，Word版）.doc</a></div>
-      <button class="fold-close" type="button">收起</button>
+
     </article>
   </div>
 </section><section class="notice-fold activity" data-fold>
@@ -190,11 +182,10 @@
   <div class="fold-body" id="notice-fold-school-0-w4-1" hidden>
     <article class="notice-card activity">
       <div class="notice-topline"><span>2026-05-28</span><span>学生工作部（武装部）/ 通知公告</span></div>
-      <div class="notice-title-row"><a class="notice-title" href="https://xsgzb.sxgkd.edu.cn/info/1028/4030.htm" target="_blank" rel="noreferrer">关于举办我校第三届心理游园会的通知</a><span class="notice-badges"><span class="category-tag activity">竞赛活动</span></span></div>
+      <div class="notice-title-row"><a class="notice-title" href="https://xsgzb.sxgkd.edu.cn/info/1028/4030.htm" target="_blank" rel="noreferrer">关于举办我校第三届心理游园会的通知</a><span class="notice-badges"><span class="category-tag activity">竞赛活动</span><button class="fold-close" type="button" aria-label="收起通知" title="收起"><span aria-hidden="true">↑</span></button></span></div>
       <div class="time-hints"><span><strong>活动时间</strong>2026-05-26 14:30-18:00</span></div>
       <p>学生工作部通知举办第三届心理游园会，面向各学院组织心理健康教育活动，旨在创新育人形式、涵养积极向上校园风气，助力学生身心健康发展。活动地点包含西区同心广场、中区步行街和东区技能广场，通知列出多个学院承办的互动项目。</p>
       <div class="attachments"><strong>附件</strong><span class="muted">无附件</span></div>
-      <button class="fold-close" type="button">收起</button>
     </article>
   </div>
 </section><section class="notice-fold activity is-new" data-fold>
@@ -206,11 +197,10 @@
   <div class="fold-body" id="notice-fold-school-0-w4-2" hidden>
     <article class="notice-card activity is-new">
       <div class="notice-topline"><span>2026-05-25</span><span>校团委 / 学生社团</span></div>
-      <div class="notice-title-row"><a class="notice-title" href="https://tw.sxgkd.edu.cn/info/1312/13502.htm" target="_blank" rel="noreferrer">工科大学生社团活动预告（5.25-5.31）</a><span class="notice-badges"><span class="new-badge">新</span><span class="category-tag activity">竞赛活动</span></span></div>
+      <div class="notice-title-row"><a class="notice-title" href="https://tw.sxgkd.edu.cn/info/1312/13502.htm" target="_blank" rel="noreferrer">工科大学生社团活动预告（5.25-5.31）</a><span class="notice-badges"><span class="new-badge">新</span><span class="category-tag activity">竞赛活动</span><button class="fold-close" type="button" aria-label="收起通知" title="收起"><span aria-hidden="true">↑</span></button></span></div>
       <div class="time-hints"><span><strong>活动时间</strong>2026-05-25 至 2026-05-31</span></div>
       <p>校团委发布5月25日至5月31日学生社团活动预告，覆盖升旗仪式、合唱、旅游故事分享、滑板联谊、无人机、心理游园会、应急救护、电脑硬件、金融理财、法语征文、观影等多类活动。页面按社团列出活动名称、时间和地点，便于学生按兴趣参加。</p>
       <div class="attachments"><strong>附件</strong><span class="muted">无附件</span></div>
-      <button class="fold-close" type="button">收起</button>
     </article>
   </div>
 </section><section class="notice-fold exam" data-fold>
@@ -222,10 +212,9 @@
   <div class="fold-body" id="notice-fold-school-0-w4-3" hidden>
     <article class="notice-card exam">
       <div class="notice-topline"><span>2026-05-22</span><span>招生信息网 / 招生快讯</span></div>
-      <div class="notice-title-row"><a class="notice-title" href="https://zsxxw.sxgkd.edu.cn/info/1010/4460.htm" target="_blank" rel="noreferrer">专升本档案邮寄说明</a><span class="notice-badges"><span class="category-tag exam">学业考试</span></span></div>
+      <div class="notice-title-row"><a class="notice-title" href="https://zsxxw.sxgkd.edu.cn/info/1010/4460.htm" target="_blank" rel="noreferrer">专升本档案邮寄说明</a><span class="notice-badges"><span class="category-tag exam">学业考试</span><button class="fold-close" type="button" aria-label="收起通知" title="收起"><span aria-hidden="true">↑</span></button></span></div>
       <p>面向2026级专升本考生，提醒邮寄档案前按要求填写并粘贴相关资料，未按要求处理的档案将退回原学校。页面给出档案馆联系人、联系电话、邮寄地址、邮政编码，以及档案袋封面需填写的考生号、姓名、性别、联系电话和录取专业等信息。</p>
       <div class="attachments"><strong>附件</strong><span class="muted">无附件</span></div>
-      <button class="fold-close" type="button">收起</button>
     </article>
   </div>
 </section></div></div></details></div></details></section>
@@ -238,10 +227,10 @@
   <div class="fold-body" id="notice-fold-college-0-w1-unit-0-0" hidden>
     <article class="notice-card other is-new">
       <div class="notice-topline"><span>2026-05-07</span><span>工程管理学院 / 通知公告</span></div>
-      <div class="notice-title-row"><a class="notice-title" href="https://gcglxy.sxgkd.edu.cn/info/1501/9353.htm" target="_blank" rel="noreferrer">2026年春季学期“智能材料与器件”微专业招生简章0506</a><span class="notice-badges"><span class="new-badge">新</span><span class="category-tag other">其他通知</span></span></div>
+      <div class="notice-title-row"><a class="notice-title" href="https://gcglxy.sxgkd.edu.cn/info/1501/9353.htm" target="_blank" rel="noreferrer">2026年春季学期“智能材料与器件”微专业招生简章0506</a><span class="notice-badges"><span class="new-badge">新</span><span class="category-tag other">其他通知</span><button class="fold-close" type="button" aria-label="收起通知" title="收起"><span aria-hidden="true">↑</span></button></span></div>
       <p>工程管理学院发布“智能材料与器件”微专业招生简章，面向校内土木工程检测技术、建设工程管理、工程造价、现代物业管理、智能建造工程、建筑工程技术、工程监理等相关专业本专科在读学生。微专业利用课余、周末或寒暑假学习，修满学分且考核合格后可获学校官方微专业结业证书，并提供实习和就业推荐通道。</p>
       <div class="attachments"><strong>附件</strong><a href="https://gcglxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&amp;owner=1831473813&amp;wbfileid=E1C3518E399A6F77B6052F1F581A012F" target="_blank" rel="noreferrer">附件1：智能材料与器件微专业报名表.docx</a></div>
-      <button class="fold-close" type="button">收起</button>
+
     </article>
   </div>
 </section><section class="notice-fold activity is-new" data-fold>
@@ -253,11 +242,11 @@
   <div class="fold-body" id="notice-fold-college-0-w1-unit-0-1" hidden>
     <article class="notice-card activity is-new">
       <div class="notice-topline"><span>2026-05-07</span><span>工程管理学院 / 通知公告</span></div>
-      <div class="notice-title-row"><a class="notice-title" href="https://gcglxy.sxgkd.edu.cn/info/1501/9333.htm" target="_blank" rel="noreferrer">关于举办2026年山西工程科技职业大学建设工程数字化计量与计价技能竞赛的通知</a><span class="notice-badges"><span class="new-badge">新</span><span class="category-tag activity">竞赛活动</span></span></div>
+      <div class="notice-title-row"><a class="notice-title" href="https://gcglxy.sxgkd.edu.cn/info/1501/9333.htm" target="_blank" rel="noreferrer">关于举办2026年山西工程科技职业大学建设工程数字化计量与计价技能竞赛的通知</a><span class="notice-badges"><span class="new-badge">新</span><span class="category-tag activity">竞赛活动</span><button class="fold-close" type="button" aria-label="收起通知" title="收起"><span aria-hidden="true">↑</span></button></span></div>
       <div class="time-hints"><span><strong>报名截止</strong>2026-05-11</span><span><strong>竞赛时间</strong>2026-05-12 14:30-18:00</span></div>
       <p>工程管理学院承办2026年建设工程数字化计量与计价技能竞赛，面向校内学生个人参赛，竞赛内容参考国赛、省赛相关模块。比赛地点为产教融合楼510、512，成绩由广联达软件考试系统打分并经评审组复核，表现优异者将优先推荐参加省赛或推荐就业单位。</p>
       <div class="attachments"><strong>附件</strong><a href="https://gcglxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&amp;owner=1831473813&amp;wbfileid=57EE95B33702EFD1C59CC6830CADF2BC" target="_blank" rel="noreferrer">附件：建设工程数字化计量与计价技能竞赛报名表.doc</a></div>
-      <button class="fold-close" type="button">收起</button>
+
     </article>
   </div>
 </section></div></div></details><details class="unit-group" open><summary><span>计算机工程学院</span><strong>1</strong></summary><div class="unit-body"><div class="notice-list"><section class="notice-fold activity is-new" data-fold>
@@ -269,11 +258,10 @@
   <div class="fold-body" id="notice-fold-college-0-w1-unit-1-0" hidden>
     <article class="notice-card activity is-new">
       <div class="notice-topline"><span>2026-05-07</span><span>计算机工程学院 / 通知公告</span></div>
-      <div class="notice-title-row"><a class="notice-title" href="https://jsjgcxy.sxgkd.edu.cn/info/1003/14283.htm" target="_blank" rel="noreferrer">关于举办2026年山西工程科技职业大学5G组网与运维的通知</a><span class="notice-badges"><span class="new-badge">新</span><span class="category-tag activity">竞赛活动</span></span></div>
+      <div class="notice-title-row"><a class="notice-title" href="https://jsjgcxy.sxgkd.edu.cn/info/1003/14283.htm" target="_blank" rel="noreferrer">关于举办2026年山西工程科技职业大学5G组网与运维的通知</a><span class="notice-badges"><span class="new-badge">新</span><span class="category-tag activity">竞赛活动</span><button class="fold-close" type="button" aria-label="收起通知" title="收起"><span aria-hidden="true">↑</span></button></span></div>
       <div class="time-hints"><span><strong>报名截止</strong>2026-05-11</span><span><strong>竞赛时间</strong>2026-05-12 14:30-16:30</span></div>
       <p>计算机工程学院承办2026年5G组网与运维技能竞赛，面向校内学生个人参赛，竞赛题型参考5G组网与运维国赛、省赛操作技能模块。比赛地点为9号实训楼303、304实训室，原则上不超过40人参赛，表现优异者将优先推荐参加省赛。</p>
       <div class="attachments"><strong>附件</strong><span class="muted">无附件</span></div>
-      <button class="fold-close" type="button">收起</button>
     </article>
   </div>
 </section></div></div></details></div></details><details class="week-group" open><summary><span>5月第二周</span><strong>0</strong></summary><div class="week-body"><div class="empty-state compact">暂无学院通知</div></div></details><details class="week-group" open><summary><span>5月第三周</span><strong>0</strong></summary><div class="week-body"><div class="empty-state compact">暂无学院通知</div></div></details><details class="week-group" open><summary><span>5月第四周</span><strong>0</strong></summary><div class="week-body"><div class="empty-state compact">暂无学院通知</div></div></details></div></details></section>
