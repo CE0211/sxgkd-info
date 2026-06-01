@@ -286,7 +286,83 @@
       .history-footer { display: block; }
       .history-footer a { display: inline-flex; margin-top: 12px; }
     }
-  </style>
+
+    .category-tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      border-radius: 999px;
+      padding: 3px 9px;
+      font-size: 12px;
+      font-weight: 900;
+      color: #fff;
+      white-space: nowrap;
+    }
+    .category-tag.exam { background: var(--exam); }
+    .category-tag.activity { background: var(--activity); }
+    .category-tag.award { background: var(--award); }
+    .category-tag.life { background: var(--life); }
+    .category-tag.holiday { background: var(--holiday); }
+    .category-tag.other { background: var(--other); }
+    .month-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+    .month-card > summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 18px;
+      font-weight: 950;
+      color: var(--ink);
+    }
+    .month-card > summary::-webkit-details-marker,
+    .week-group > summary::-webkit-details-marker { display: none; }
+    .month-card > summary::before,
+    .week-group > summary::before { content: "›"; transition: transform .16s ease; }
+    .month-card[open] > summary::before,
+    .week-group[open] > summary::before { transform: rotate(90deg); }
+    .month-card > summary span,
+    .week-group > summary span { margin-right: auto; }
+    .month-card > summary strong,
+    .week-group > summary strong {
+      display: inline-grid;
+      min-width: 30px;
+      height: 30px;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--surface-soft);
+      color: var(--accent-strong);
+      font-size: 13px;
+    }
+    .month-body { padding: 0 14px 14px; }
+    .week-group {
+      border-top: 1px solid var(--line);
+      padding-top: 6px;
+    }
+    .week-group > summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 2px;
+      font-weight: 900;
+      color: var(--muted);
+    }
+    .empty-state.compact { margin: 4px 0 12px; padding: 12px; }
+    @media (max-width: 640px) {
+      .month-card > summary { padding: 14px; }
+      .month-body { padding: 0 10px 10px; }
+      .category-tag { font-size: 11px; padding: 3px 7px; }
+    }
+</style>
 </head>
 <body>
   <main class="page">
@@ -298,13 +374,13 @@
           <p class="hero-copy">聚合学校公开通知，按学业考试、竞赛活动、奖助评优、校园生活、假期安排和其他通知分类，方便快速查看原文。</p>
         </div>
         <div class="status-card">
-          <div class="status-line"><p class="status-label">最后更新</p><p class="status-value">2026-05-31 19:47:49</p></div>
+          <div class="status-line"><p class="status-label">最后更新</p><p class="status-value">2026-06-01 12:33:24</p></div>
           <div class="status-line"><p class="status-label">下次更新</p><p class="status-value">今日 20:00</p></div>
         </div>
       </div>
       <div class="metrics" aria-label="检测概览">
-        <div class="metric is-hot"><span>本次新增</span><strong>1</strong><em class="metric-badge">有更新</em></div>
-        <div class="metric"><span>已记录通知</span><strong>3</strong></div>
+        <div class="metric is-hot"><span>本次新增</span><strong>3</strong><em class="metric-badge">已补入历史</em></div>
+        <div class="metric"><span>已记录通知</span><strong>6</strong></div>
       </div>
       <div class="source-row" aria-label="数据来源"><a href="https://www.sxgkd.edu.cn/tzgg.htm" target="_blank" rel="noreferrer">学校主站</a><a href="https://jwb.sxgkd.edu.cn/index/tzgg.htm" target="_blank" rel="noreferrer">教务部</a><a href="https://cxcyxy.sxgkd.edu.cn/tzgg.htm" target="_blank" rel="noreferrer">创新创业学院</a><a href="https://zsxxw.sxgkd.edu.cn/" target="_blank" rel="noreferrer">招生信息网</a><a href="https://xsgzb.sxgkd.edu.cn/tzgg.htm" target="_blank" rel="noreferrer">学生工作部</a></div>
     </section>
@@ -318,7 +394,7 @@
     </div>
     <span class="section-count exam">0</span>
   </div>
-  <div class="empty-state">暂无已记录通知</div>
+  <div class="empty-state">本周暂无已记录通知</div>
 </section>
 <section class="category-section">
   <div class="section-head">
@@ -326,24 +402,9 @@
       <p class="section-kicker">分类</p>
       <h2>竞赛活动</h2>
     </div>
-    <span class="section-count activity">1</span>
+    <span class="section-count activity">0</span>
   </div>
-  <details class="day-group" open>
-  <summary><span>2026-05-28</span><strong>1</strong></summary>
-  <div class="notice-list"><article class="notice-card activity is-new">
-  <div class="notice-topline">
-    <span>2026-05-28</span>
-    <span>学生工作部（武装部）/ 通知公告</span>
-  </div>
-  <div class="notice-title-row">
-    <a class="notice-title" href="https://xsgzb.sxgkd.edu.cn/info/1028/4030.htm" target="_blank" rel="noreferrer">关于举办我校第三届心理游园会的通知</a>
-    <span class="new-badge">新</span>
-  </div>
-  <div class="time-hints"><span><strong>活动时间</strong>2026-05-26 14:30-18:00</span></div>
-  <p>学生工作部通知举办第三届心理游园会，面向各学院组织心理健康教育活动，旨在创新育人形式、涵养积极向上校园风气，助力学生身心健康发展。活动地点包含西区同心广场、中区步行街和东区技能广场，通知列出多个学院承办的互动项目。</p>
-  <div class="attachments"><strong>附件</strong><span class="muted">无附件</span></div>
-</article></div>
-</details>
+  <div class="empty-state">本周暂无已记录通知</div>
 </section>
 <section class="category-section">
   <div class="section-head">
@@ -353,7 +414,7 @@
     </div>
     <span class="section-count award">0</span>
   </div>
-  <div class="empty-state">暂无已记录通知</div>
+  <div class="empty-state">本周暂无已记录通知</div>
 </section>
 <section class="category-section">
   <div class="section-head">
@@ -363,7 +424,7 @@
     </div>
     <span class="section-count life">0</span>
   </div>
-  <div class="empty-state">暂无已记录通知</div>
+  <div class="empty-state">本周暂无已记录通知</div>
 </section>
 <section class="category-section">
   <div class="section-head">
@@ -373,7 +434,7 @@
     </div>
     <span class="section-count holiday">0</span>
   </div>
-  <div class="empty-state">暂无已记录通知</div>
+  <div class="empty-state">本周暂无已记录通知</div>
 </section>
 <section class="category-section">
   <div class="section-head">
@@ -383,7 +444,7 @@
     </div>
     <span class="section-count other">0</span>
   </div>
-  <div class="empty-state">暂无已记录通知</div>
+  <div class="empty-state">本周暂无已记录通知</div>
 </section>
     </div>
 
@@ -391,9 +452,9 @@
   <div>
     <p class="section-kicker">历史归档</p>
     <h2>更早通知已收纳</h2>
-    <p>上周及更早的通知按周、按天折叠保存。</p>
+    <p>上周及更早的通知按月份卡片和四个周收纳。</p>
   </div>
-  <a href="history.html">查看历史归档 <strong>2</strong></a>
+  <a href="history.html">查看历史归档 <strong>6</strong></a>
 </section>
 
     <p class="site-note">非学校官方，仅整理公开信息，原文以官网为准。</p>
