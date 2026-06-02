@@ -4,6 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0f766e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="信息门户">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
   <title>历史归档 - 山西工程科技职业大学信息门户</title>
   <script>
     (() => {
@@ -354,6 +359,14 @@
         const close = fold.querySelector('.fold-close');
         summary.addEventListener('click', () => openFold(fold));
         close.addEventListener('click', () => closeFold(fold));
+      });
+    })();
+  </script>
+  <script>
+    (() => {
+      if (!('serviceWorker' in navigator)) return;
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(() => {});
       });
     })();
   </script>

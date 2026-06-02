@@ -1,0 +1,37 @@
+name: Update information portal
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Beijing time 08:00, 10:00, 12:00, 14:00, 16:00, 18:00, 20:00.
+    # GitHub schedules use UTC, so these are 00:07 through 12:07 UTC.
+    - cron: '7 0,2,4,6,8,10,12 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sxgkd-info-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Pages repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Configure Git author
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Update portal pages
+        run: node tools/update-portal.mjs
