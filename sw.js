@@ -1,6 +1,5 @@
 const CACHE_NAME = 'sxgkd-info-v1';
 const APP_SHELL = [
-  './',
   './index.html',
   './history.html',
   './manifest.webmanifest',
@@ -34,6 +33,10 @@ self.addEventListener('fetch', (event) => {
         caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
         return response;
       })
-      .catch(() => caches.match(event.request).then((cached) => cached || caches.match('./index.html')))
+      .catch(() => caches.match(event.request).then((cached) => {
+        if (cached) return cached;
+        if (event.request.mode === 'navigate') return caches.match('./index.html');
+        return Response.error();
+      }))
   );
 });
