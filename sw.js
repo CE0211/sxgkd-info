@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sxgkd-info-v1';
+const CACHE_NAME = 'sxgkd-info-v2';
 const APP_SHELL = [
   './index.html',
   './history.html',

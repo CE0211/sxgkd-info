@@ -545,7 +545,11 @@ function syncPublicRepo() {
   if (RUNS_IN_REPO || !SHOULD_PUSH || !existsSync(path.join(PUBLIC_ROOT, '.git'))) return;
   const status = spawnSync('git', ['status', '--short'], { cwd: PUBLIC_ROOT, encoding: 'utf8' });
   if (status.stdout.trim()) return;
-  spawnSync('git', ['pull', '--ff-only', 'origin', 'main'], { cwd: PUBLIC_ROOT, stdio: 'inherit' });
+  const pull = spawnSync('git', ['pull', '--ff-only', '--quiet', 'origin', 'main'], { cwd: PUBLIC_ROOT, encoding: 'utf8' });
+  if (pull.status !== 0) {
+    if (pull.stdout) process.stdout.write(pull.stdout);
+    if (pull.stderr) process.stderr.write(pull.stderr);
+  }
 }
 
 function strip(value) {

@@ -1,6 +1,9 @@
 name: Update information portal
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
   schedule:
     # Beijing time 08:00, 10:00, 12:00, 14:00, 16:00, 18:00, 20:00.
@@ -9,6 +12,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: sxgkd-info-update
@@ -16,6 +21,7 @@ concurrency:
 
 jobs:
   update:
+    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     steps:
       - name: Check out Pages repository
@@ -35,3 +41,28 @@ jobs:
 
       - name: Update portal pages
         run: node tools/update-portal.mjs
+
+  deploy:
+    needs: update
+    if: always() && (github.event_name == 'push' || needs.update.result == 'success')
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out latest Pages files
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
