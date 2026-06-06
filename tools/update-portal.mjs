@@ -15,6 +15,8 @@ const PUBLIC_SEEN_PATH = path.join(PUBLIC_ROOT, 'data', 'seen-notices.json');
 const REPORTS_DIR = path.join(ROOT, 'reports');
 const WRITE_REPORTS = !RUNS_IN_REPO && process.env.PORTAL_WRITE_REPORTS !== '0';
 const SHOULD_PUSH = process.env.PORTAL_NO_PUSH !== '1' && process.env.PORTAL_DRY_RUN !== '1';
+const GIT_REMOTE = process.env.PORTAL_GIT_REMOTE || 'origin';
+const GIT_BRANCH = process.env.PORTAL_GIT_BRANCH || 'main';
 
 const SOURCES = [
   ['校级', '学校主站', '通知公告', 'https://www.sxgkd.edu.cn/tzgg.htm'],
@@ -72,24 +74,51 @@ const seen = await readSeen();
 const seenIds = new Set(seen.items.map((item) => item.id || item.url));
 const fetched = new Map();
 const errors = [];
+const scan = {
+  alreadySeen: 0,
+  noArticle: 0,
+  outsideWeek: 0,
+  noTitle: 0,
+  noCategory: 0,
+  excluded: 0
+};
 
 const candidates = await collectCandidates();
 const additions = [];
 for (const candidate of candidates.values()) {
-  if (seenIds.has(candidate.url)) continue;
+  if (seenIds.has(candidate.url)) {
+    scan.alreadySeen += 1;
+    continue;
+  }
 
   const article = await get(candidate.url);
-  if (!article.html) continue;
+  if (!article.html) {
+    scan.noArticle += 1;
+    continue;
+  }
 
   const body = strip(article.html);
   const date = articleDate(article.html, candidate.listDate);
-  if (!date || date < weekStart || date > weekEnd) continue;
+  if (!date || date < weekStart || date > weekEnd) {
+    scan.outsideWeek += 1;
+    continue;
+  }
 
   const title = pickTitle(candidate.listTitle, article.html, body);
-  if (!title || BAD_NAV.test(title)) continue;
+  if (!title || BAD_NAV.test(title)) {
+    scan.noTitle += 1;
+    continue;
+  }
 
   const category = classify(title, body);
-  if (!category || isExcluded(title, body)) continue;
+  if (!category) {
+    scan.noCategory += 1;
+    continue;
+  }
+  if (isExcluded(title, body)) {
+    scan.excluded += 1;
+    continue;
+  }
 
   additions.push({
     id: candidate.url,
@@ -138,6 +167,7 @@ console.log(JSON.stringify({
   candidateCount: candidates.size,
   newCount: additions.length,
   total: seen.items.length,
+  scan,
   errors
 }, null, 2));
 
@@ -532,12 +562,19 @@ function attachmentHtml(item) {
 
 function commitAndPush(newCount) {
   if (!SHOULD_PUSH) return;
+  rebaseRemote('before commit');
   const status = spawnSync('git', ['status', '--short', '--', 'index.html', 'history.html', 'data/seen-notices.json'], { cwd: PUBLIC_ROOT, encoding: 'utf8' });
   if (!status.stdout.trim()) return;
-  spawnSync('git', ['add', 'index.html', 'history.html', 'data/seen-notices.json'], { cwd: PUBLIC_ROOT, stdio: 'inherit' });
-  const commit = spawnSync('git', ['commit', '-m', `Auto update portal ${today} (${newCount} new)`], { cwd: PUBLIC_ROOT, stdio: 'inherit' });
-  if (commit.status === 0) {
-    spawnSync('git', ['push', 'origin', 'main'], { cwd: PUBLIC_ROOT, stdio: 'inherit' });
+  runGit(['add', 'index.html', 'history.html', 'data/seen-notices.json']);
+  const commit = runGit(['commit', '-m', `Auto update portal ${today} (${newCount} new)`], { check: false });
+  if (commit.status !== 0) {
+    if (/nothing to commit|no changes added/i.test(`${commit.stdout}\n${commit.stderr}`)) return;
+    throw new Error(`git commit failed with exit code ${commit.status}`);
+  }
+  const push = runGit(['push', GIT_REMOTE, `HEAD:${GIT_BRANCH}`], { check: false });
+  if (push.status !== 0) {
+    rebaseRemote('after push rejection');
+    runGit(['push', GIT_REMOTE, `HEAD:${GIT_BRANCH}`]);
   }
 }
 
@@ -545,11 +582,26 @@ function syncPublicRepo() {
   if (RUNS_IN_REPO || !SHOULD_PUSH || !existsSync(path.join(PUBLIC_ROOT, '.git'))) return;
   const status = spawnSync('git', ['status', '--short'], { cwd: PUBLIC_ROOT, encoding: 'utf8' });
   if (status.stdout.trim()) return;
-  const pull = spawnSync('git', ['pull', '--ff-only', '--quiet', 'origin', 'main'], { cwd: PUBLIC_ROOT, encoding: 'utf8' });
-  if (pull.status !== 0) {
-    if (pull.stdout) process.stdout.write(pull.stdout);
-    if (pull.stderr) process.stderr.write(pull.stderr);
+  rebaseRemote('initial sync');
+}
+
+function rebaseRemote(label) {
+  if (!existsSync(path.join(PUBLIC_ROOT, '.git'))) return;
+  runGit(['fetch', '--quiet', GIT_REMOTE, GIT_BRANCH]);
+  const rebase = runGit(['rebase', '--autostash', `${GIT_REMOTE}/${GIT_BRANCH}`], { check: false });
+  if (rebase.status !== 0) {
+    throw new Error(`git rebase failed during ${label} with exit code ${rebase.status}`);
   }
+}
+
+function runGit(args, options = {}) {
+  const result = spawnSync('git', args, { cwd: PUBLIC_ROOT, encoding: 'utf8' });
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+  if (options.check !== false && result.status !== 0) {
+    throw new Error(`git ${args.join(' ')} failed with exit code ${result.status}`);
+  }
+  return result;
 }
 
 function strip(value) {
