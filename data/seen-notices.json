@@ -1,5 +1,5 @@
 {
-  "lastCheckAt": "2026-06-12 10:00:02",
+  "lastCheckAt": "2026-06-12 12:00:04",
   "items": [
     {
       "id": "https://hqbwb.sxgkd.edu.cn/info/1432/4792.htm",
@@ -527,6 +527,52 @@
       "timeHints": [],
       "scope": "学院",
       "unit": "文法学院"
+    },
+    {
+      "id": "https://cxcyxy.sxgkd.edu.cn/info/1036/4946.htm",
+      "category": "学业考试",
+      "title": "关于组织参加山西省第十届中华职业教育创新创业大赛校内选拔赛的通知",
+      "date": "2026-06-12",
+      "source": "创新创业学院 / 通知公告",
+      "url": "https://cxcyxy.sxgkd.edu.cn/info/1036/4946.htm",
+      "summary": "官网发布学业考试相关通知，面向相关学生提醒办理或参加事项。截止时间为2026-06-12。地点为六号教学楼609、612办公室 (拟稿/初审：姜波 复审：李强 终审：杨宏伟)。具体名单和要求以官网原文为准。",
+      "attachments": [
+        {
+          "name": "附件1：山西省第十届中华职业教育创新创业大赛的通知.pdf",
+          "url": "https://cxcyxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1792760113&wbfileid=2E741F908024907D2F03A0AA9271E164"
+        },
+        {
+          "name": "附件2：山西省第十届中华职业教育创新创业大赛主体赛规程.pdf",
+          "url": "https://cxcyxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1792760113&wbfileid=B67D538B26999902EFCF31EB15879159"
+        },
+        {
+          "name": "附件3：山西省中华职业教育创业模拟大赛规程.pdf",
+          "url": "https://cxcyxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1792760113&wbfileid=8DA939AB75C9C805F01743919E7ED60F"
+        },
+        {
+          "name": "附件4：山西省中华职业教育创新设计大赛规程.pdf",
+          "url": "https://cxcyxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1792760113&wbfileid=E02297BF366E8092D3A5FAB32C1A438B"
+        },
+        {
+          "name": "附件5：本科组项目申报评审书.doc",
+          "url": "https://cxcyxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1792760113&wbfileid=AD5FC4FD0124C645E94E69F05A85D9C3"
+        },
+        {
+          "name": "附件6：高职组项目申报评审书.doc",
+          "url": "https://cxcyxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1792760113&wbfileid=5A2C15D4538E1507499C89DBCBC8C88B"
+        }
+      ],
+      "firstSeenAt": "2026-06-12 12:00:04",
+      "lastSeenAt": "2026-06-12 12:00:04",
+      "timeHints": [
+        {
+          "label": "截止时间",
+          "value": "2026-06-12",
+          "startDate": "2026-06-12"
+        }
+      ],
+      "scope": "校级",
+      "unit": "创新创业学院"
     }
   ]
 }
