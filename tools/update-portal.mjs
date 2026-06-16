@@ -57,6 +57,7 @@ const SOURCES = [
 ].map(([scope, unit, page, url]) => ({ scope, unit, page, url }));
 
 const BAD_NAV = /^(首页|学校首页|网站首页|更多|more|English|旧版|设为首页|加入收藏|联系我们|学院概况|组织机构|师资队伍|教学科研|党建工作|学团工作|招生就业|人才培养|专业建设|党群工作|部门概况|政策制度|资料下载|校友工作|图片新闻|学院新闻|工作动态|新闻动态|综合新闻|通知公告|招生就业)$/i;
+const BAD_TITLES = /^(学科竞赛|招生宣传|招生工作|就业工作|学生工作|学生下载|团学工作|共青团工作|专业要闻|党建要闻)$/;
 const NAV_WORDS = /(通知|公告|公示|学生|招生|就业|竞赛|技能|实训|社团|下载|报名)/;
 
 const now = chinaNow();
@@ -84,6 +85,9 @@ const scan = {
 };
 
 const candidates = await collectCandidates();
+if (candidates.size === 0 && errors.length >= Math.ceil(SOURCES.length * 0.8)) {
+  throw new Error(`Portal update aborted: ${errors.length}/${SOURCES.length} sources failed before any candidates were found.`);
+}
 const additions = [];
 for (const candidate of candidates.values()) {
   if (seenIds.has(candidate.url)) {
@@ -105,7 +109,7 @@ for (const candidate of candidates.values()) {
   }
 
   const title = pickTitle(candidate.listTitle, article.html, body);
-  if (!title || BAD_NAV.test(title)) {
+  if (!title || BAD_NAV.test(title) || BAD_TITLES.test(title)) {
     scan.noTitle += 1;
     continue;
   }
@@ -357,6 +361,7 @@ function attachments(html, base) {
 function classify(title, body) {
   if (!/(关于|通知|公告|安排|报名|考试|竞赛|招生|公示|预告|倡议书|简章|说明)/.test(title)) return '';
   const text = `${title} ${body.slice(0, 1800)}`;
+  if (/招生宣传片?$/.test(title) && !/报名|录取|志愿|考试|选拔|通知|公告|安排/.test(title)) return '';
   const groups = [
     ['学业考试', /考试|专升本|计算机等级|四六级|补考|缓考|普通话|成绩|报名|准考证|录取|志愿|考查|考场|学位|毕业资格/],
     ['竞赛活动', /比赛|竞赛|技能大赛|创新创业大赛|挑战杯|互联网\+|征集|活动|讲座|游园会|心理|培训|宣讲|招募|项目|社团|志愿服务/],
@@ -595,13 +600,24 @@ function rebaseRemote(label) {
 }
 
 function runGit(args, options = {}) {
-  const result = spawnSync('git', args, { cwd: PUBLIC_ROOT, encoding: 'utf8' });
-  if (result.stdout) process.stdout.write(result.stdout);
-  if (result.stderr) process.stderr.write(result.stderr);
-  if (options.check !== false && result.status !== 0) {
-    throw new Error(`git ${args.join(' ')} failed with exit code ${result.status}`);
+  const attempts = options.attempts || (/^(fetch|push)$/.test(args[0]) ? 3 : 1);
+  let result;
+  for (let index = 1; index <= attempts; index += 1) {
+    result = spawnSync('git', args, { cwd: PUBLIC_ROOT, encoding: 'utf8' });
+    if (result.stdout) process.stdout.write(result.stdout);
+    if (result.stderr) process.stderr.write(result.stderr);
+    if (result.status === 0) return result;
+    if (index < attempts) {
+      process.stderr.write(`git ${args.join(' ')} failed, retrying ${index + 1}/${attempts}\n`);
+      sleep(4000 * index);
+    }
   }
+  if (options.check !== false) throw new Error(`git ${args.join(' ')} failed with exit code ${result.status}`);
   return result;
+}
+
+function sleep(ms) {
+  Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
 }
 
 function strip(value) {
