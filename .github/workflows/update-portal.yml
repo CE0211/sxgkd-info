@@ -21,7 +21,7 @@ concurrency:
 
 jobs:
   update:
-    if: github.event_name != 'push'
+    if: github.event_name != 'push' || (github.actor != 'github-actions[bot]' && contains(github.event.head_commit.message, '[run-update]'))
     runs-on: ubuntu-latest
     steps:
       - name: Check out Pages repository
