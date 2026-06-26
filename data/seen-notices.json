@@ -1,5 +1,5 @@
 {
-  "lastCheckAt": "2026-06-26 12:35:49",
+  "lastCheckAt": "2026-06-26 16:00:02",
   "items": [
     {
       "id": "https://cxcyxy.sxgkd.edu.cn/info/1036/4946.htm",
@@ -632,6 +632,26 @@
       "timeHints": [],
       "scope": "学院",
       "unit": "信息工程学院"
+    },
+    {
+      "id": "https://aqyyjglxy.sxgkd.edu.cn/info/1281/4322.htm",
+      "category": "学业考试",
+      "title": "关于 2025",
+      "date": "2026-06-26",
+      "source": "安全与应急管理学院 / 通知公告",
+      "url": "https://aqyyjglxy.sxgkd.edu.cn/info/1281/4322.htm",
+      "summary": "官网发布学业考试相关通知。-2026 学年第二学期专业课期末考试安排的通知-安全与应急管理学院 党政办公室 Party and government office --> 学校首页 首页 学院简介 学院介绍 专业介绍 机构设置 现任领导 党建工作 组织机构 党建活动 支部风采 学习园地 团学工作 团学动态 评优评先 奖勤助贷 日常活动 教育教学 教师风采 教学动态 实训基地 科研创作 科研成果 学术交流 招生就业 招生工作 就业工作 合作交流 产教融合 对外交流 社会服务 学校首页 首页 学院简介 学院介绍 专业介绍 机构设置 现任领导 党",
+      "attachments": [
+        {
+          "name": "通知公告-许库尔-2025-2026 学年第二学期专业课期末考试安排表.xls",
+          "url": "https://aqyyjglxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=2057901377&wbfileid=4A22E598B29B9233BF9BE3FF8F010371"
+        }
+      ],
+      "firstSeenAt": "2026-06-26 16:00:02",
+      "lastSeenAt": "2026-06-26 16:00:02",
+      "timeHints": [],
+      "scope": "学院",
+      "unit": "安全与应急管理学院"
     }
   ]
 }
