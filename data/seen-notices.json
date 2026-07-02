@@ -1,5 +1,5 @@
 {
-  "lastCheckAt": "2026-07-01 12:49:03",
+  "lastCheckAt": "2026-07-02 12:16:50",
   "items": [
     {
       "id": "https://cxcyxy.sxgkd.edu.cn/info/1036/4946.htm",
@@ -762,6 +762,21 @@
       "timeHints": [],
       "scope": "学院",
       "unit": "管理学院"
+    },
+    {
+      "id": "https://tyxy.sxgkd.edu.cn/info/1672/5722.htm",
+      "category": "竞赛活动",
+      "title": "学风监督岗换届人员名单公示",
+      "date": "2026-06-29",
+      "source": "体育学院 / 通知公告",
+      "url": "https://tyxy.sxgkd.edu.cn/info/1672/5722.htm",
+      "summary": "官网发布竞赛活动相关通知，面向相关学生提醒办理或参加事项。具体名单和要求以官网原文为准。",
+      "attachments": [],
+      "firstSeenAt": "2026-07-02 12:16:50",
+      "lastSeenAt": "2026-07-02 12:16:50",
+      "timeHints": [],
+      "scope": "学院",
+      "unit": "体育学院"
     }
   ]
 }
