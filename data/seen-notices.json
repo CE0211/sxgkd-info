@@ -1,5 +1,5 @@
 {
-  "lastCheckAt": "2026-08-07 13:47:32",
+  "lastCheckAt": "2026-08-07 15:37:05",
   "items": [
     {
       "id": "https://cxcyxy.sxgkd.edu.cn/info/1036/4946.htm",
@@ -1098,6 +1098,52 @@
       "timeHints": [],
       "scope": "校级",
       "unit": "招生信息网"
+    },
+    {
+      "id": "https://cxcyxy.sxgkd.edu.cn/info/1036/5016.htm",
+      "category": "学业考试",
+      "title": "关于组织参加山西（晋中）第三届大学生科技创新大赛的通知",
+      "date": "2026-08-07",
+      "source": "创新创业学院 / 通知公告",
+      "url": "https://cxcyxy.sxgkd.edu.cn/info/1036/5016.htm",
+      "summary": "官网发布学业考试相关通知，面向相关学生提醒办理或参加事项。截止时间为2026-08-07。具体名单和要求以官网原文为准。",
+      "attachments": [
+        {
+          "name": "附件1：晋教科信函〔2026〕167号山西省教育厅关于组织参加山西（晋中）第三届大学生科技创新大赛的通知.pdf",
+          "url": "https://cxcyxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1792760113&wbfileid=B4C7F6933B0288D5C50652D6F8BEAD22"
+        },
+        {
+          "name": "附件2：山西（晋中）第三届大学生科技创新大赛报名资格审查标准.pdf",
+          "url": "https://cxcyxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1792760113&wbfileid=AEF1EAEA1A6EAA6EC800CC9088A3504D"
+        },
+        {
+          "name": "附件3：山西（晋中）第三届大学生科技创新大赛参赛须知.pdf",
+          "url": "https://cxcyxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1792760113&wbfileid=F69BC69EAF7CD1562C3E8D90A0D7E199"
+        },
+        {
+          "name": "附件4：山西（晋中）第三届大学生科技创新大赛项目设计方案模板.pdf",
+          "url": "https://cxcyxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1792760113&wbfileid=2527C4A39E3E017E3F87A7395A78D5DD"
+        },
+        {
+          "name": "附件5：山西（晋中）第三届大学生科技创新大赛报名表（科创团队赛道）.docx",
+          "url": "https://cxcyxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1792760113&wbfileid=95A4F347BFB8510FBB5407B7915E89EE"
+        },
+        {
+          "name": "附件6：山西（晋中）第三届大学生科技创新大赛报名表（校企合作赛道）.docx",
+          "url": "https://cxcyxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1792760113&wbfileid=7113E71940C13D9C5BF2F718F4B1BF93"
+        }
+      ],
+      "firstSeenAt": "2026-08-07 15:37:05",
+      "lastSeenAt": "2026-08-07 15:37:05",
+      "timeHints": [
+        {
+          "label": "截止时间",
+          "value": "2026-08-07",
+          "startDate": "2026-08-07"
+        }
+      ],
+      "scope": "校级",
+      "unit": "创新创业学院"
     }
   ]
 }
