@@ -1,5 +1,5 @@
 {
-  "lastCheckAt": "2026-08-11 21:34:28",
+  "lastCheckAt": "2026-08-12 10:37:34",
   "items": [
     {
       "id": "https://cxcyxy.sxgkd.edu.cn/info/1036/4946.htm",
@@ -1144,6 +1144,30 @@
       ],
       "scope": "校级",
       "unit": "创新创业学院"
+    },
+    {
+      "id": "https://www.sxgkd.edu.cn/info/1024/28336.htm",
+      "category": "学业考试",
+      "title": "山西工程科技职业大学2026年公开招聘博士研究生拟聘人员公示（第一批）",
+      "date": "2026-08-12",
+      "source": "学校主站 / 通知公告",
+      "url": "https://www.sxgkd.edu.cn/info/1024/28336.htm",
+      "summary": "官网发布学业考试相关通知，面向相关学生提醒办理或参加事项。具体名单和要求以官网原文为准。",
+      "attachments": [
+        {
+          "name": "山西工程科技职业大学2026年公开招聘博士研究生拟聘人员名单（第一批）.xlsx",
+          "url": "https://www.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1732861103&wbfileid=E530B50B8DC940FA20955E641A5B2AB8"
+        },
+        {
+          "name": "山西工程科技职业大学2026年公开招聘博士研究生拟聘人员名单（第一批）.xlsx",
+          "url": "https://www.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1732861103&wbfileid=E530B50B8DC940FA20955E641A5B2AB8"
+        }
+      ],
+      "firstSeenAt": "2026-08-12 10:37:34",
+      "lastSeenAt": "2026-08-12 10:37:34",
+      "timeHints": [],
+      "scope": "校级",
+      "unit": "学校主站"
     }
   ]
 }
