@@ -1,5 +1,5 @@
 {
-  "lastCheckAt": "2026-08-20 21:05:37",
+  "lastCheckAt": "2026-08-21 09:52:12",
   "items": [
     {
       "id": "https://cxcyxy.sxgkd.edu.cn/info/1036/4946.htm",
@@ -1273,6 +1273,52 @@
       "timeHints": [],
       "scope": "校级",
       "unit": "招生信息网"
+    },
+    {
+      "id": "https://cxcyxy.sxgkd.edu.cn/info/1036/5036.htm",
+      "category": "学业考试",
+      "title": "关于举办中国国际大学生创新大赛（2026）校级选拔赛的通知",
+      "date": "2026-08-21",
+      "source": "创新创业学院 / 通知公告",
+      "url": "https://cxcyxy.sxgkd.edu.cn/info/1036/5036.htm",
+      "summary": "官网发布学业考试相关通知，面向相关学生提醒办理或参加事项。截止时间为2026-09-08。具体名单和要求以官网原文为准。",
+      "attachments": [
+        {
+          "name": "附件1：晋教高函〔2026〕62号山西省教育厅关于举办中国国际大学生创新大赛（2026）山西赛区比赛的通知.pdf",
+          "url": "https://cxcyxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1792760113&wbfileid=63B0780DDE917DDA6A12E805BD12EE0D"
+        },
+        {
+          "name": "附件2：中国国际大学生创新大赛（2026）山西赛区比赛高教主赛道方案.pdf",
+          "url": "https://cxcyxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1792760113&wbfileid=7931E6B77A3B986681352BD6B46C5088"
+        },
+        {
+          "name": "附件3：中国国际大学生创新大赛（2026）山西赛区比赛“青年红色筑梦之旅”赛道方案.pdf",
+          "url": "https://cxcyxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1792760113&wbfileid=402E538BDBDAF24744EA0BDB66317402"
+        },
+        {
+          "name": "附件4：中国国际大学生创新大赛（2026）山西赛区比赛职教赛道方案.pdf",
+          "url": "https://cxcyxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1792760113&wbfileid=438668912B0ABE3134E02E1BF6317C4C"
+        },
+        {
+          "name": "附件5：中国国际大学生创新大赛（2026）山西赛区比赛产业赛道方案.pdf",
+          "url": "https://cxcyxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1792760113&wbfileid=9578FA22540FC26206F41880DB96C2CE"
+        },
+        {
+          "name": "附件6：中国国际大学生创新大赛(2026)山西工程科技职业大学校赛推荐表.xlsx",
+          "url": "https://cxcyxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1792760113&wbfileid=8941DD7AE81B7D782DFC1F7CD01907B0"
+        }
+      ],
+      "firstSeenAt": "2026-08-21 09:52:12",
+      "lastSeenAt": "2026-08-21 09:52:12",
+      "timeHints": [
+        {
+          "label": "截止时间",
+          "value": "2026-09-08",
+          "startDate": "2026-09-08"
+        }
+      ],
+      "scope": "校级",
+      "unit": "创新创业学院"
     }
   ]
 }
