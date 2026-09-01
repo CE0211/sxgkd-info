@@ -1,5 +1,5 @@
 {
-  "lastCheckAt": "2026-09-01 12:57:06",
+  "lastCheckAt": "2026-09-01 19:33:16",
   "items": [
     {
       "id": "https://cxcyxy.sxgkd.edu.cn/info/1036/4946.htm",
@@ -1319,6 +1319,34 @@
       ],
       "scope": "校级",
       "unit": "创新创业学院"
+    },
+    {
+      "id": "https://tw.sxgkd.edu.cn/info/1352/14092.htm",
+      "category": "学业考试",
+      "title": "关于开展2026年申报成立新学生社团工作的通知",
+      "date": "2026-09-01",
+      "source": "校团委 / 通知公告",
+      "url": "https://tw.sxgkd.edu.cn/info/1352/14092.htm",
+      "summary": "官网发布学业考试相关通知。-山西工程科技职业大学-团委 设为首页 | 加入收藏 首页 组织机构 团委简介 工作职责 组织建设 校园文化 社会实践 志愿服务 学生社团 第二课堂 下载中心 首页 工作动态 通知公告 基层风采 通知公告  关于开展2026年申报成立新学生社团工作的通知 发布日期：2026-09-01  附件【 附件2 山西工程科技职业大学学生社团成立申请表（含成员名册）.xlsx 】已下载 次 附件【 附件3 山西工程科技职业大学学生社团指导教师申请表.docx 】已下载 次 地址：山西省晋中市榆次区文华街369号 邮编：030",
+      "attachments": [
+        {
+          "name": "附件1 学生社团章程大纲参考.docx",
+          "url": "https://tw.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1841493916&wbfileid=CBA7E42FB93D53EB8FFEFDFDCE5C3571"
+        },
+        {
+          "name": "附件2 山西工程科技职业大学学生社团成立申请表（含成员名册）.xlsx",
+          "url": "https://tw.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1841493916&wbfileid=8C84BC2B8CE2DF3132090DF1F188A363"
+        },
+        {
+          "name": "附件3 山西工程科技职业大学学生社团指导教师申请表.docx",
+          "url": "https://tw.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1841493916&wbfileid=FF7731B1407A51D161D5970CED13480E"
+        }
+      ],
+      "firstSeenAt": "2026-09-01 19:33:16",
+      "lastSeenAt": "2026-09-01 19:33:16",
+      "timeHints": [],
+      "scope": "校级",
+      "unit": "校团委"
     }
   ]
 }
