@@ -1,5 +1,5 @@
 {
-  "lastCheckAt": "2026-09-03 19:06:03",
+  "lastCheckAt": "2026-09-04 12:20:52",
   "items": [
     {
       "id": "https://cxcyxy.sxgkd.edu.cn/info/1036/4946.htm",
@@ -1347,6 +1347,56 @@
       "timeHints": [],
       "scope": "校级",
       "unit": "校团委"
+    },
+    {
+      "id": "https://hqbwb.sxgkd.edu.cn/info/1432/4962.htm",
+      "category": "校园生活",
+      "title": "关于校内电动自行车安装专属牌照的通知",
+      "date": "2026-09-04",
+      "source": "后勤保卫 / 通知公告",
+      "url": "https://hqbwb.sxgkd.edu.cn/info/1432/4962.htm",
+      "summary": "官网发布校园生活相关通知。-山西工程科技职业大学后勤保卫部 设为首页 加入收藏 首页 部门概况 部门简介 科室设置 党建园地 第一议题 主题党日 服务指南 规章制度 相关下载 联系我们 首页 新闻动态 通知公告 党建风采 健康知识 校园映像 通知公告 位置： 首页 > 通知公告 > 正文 关于校内电动自行车安装专属牌照的通知  各部门、各学院： 为全面加强校内电动自行车全链条安全管理，切实保障师生生命财产安全，营造安全、文明、有序的校园环境，根据《山西省学校电动自行车安全隐患全链条整治行动实施方案》（晋教安稳函〔 2024〕8号） 《 山西",
+      "attachments": [
+        {
+          "name": "校内电动自行车安装牌照时间安排表.xlsx",
+          "url": "https://hqbwb.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1838649616&wbfileid=C2FB6F78804DE4B359BB60E0641ECD32"
+        }
+      ],
+      "firstSeenAt": "2026-09-04 12:20:52",
+      "lastSeenAt": "2026-09-04 12:20:52",
+      "timeHints": [
+        {
+          "label": "截止时间",
+          "value": "2026-09-04",
+          "startDate": "2026-09-04"
+        }
+      ],
+      "scope": "校级",
+      "unit": "后勤保卫"
+    },
+    {
+      "id": "https://zhxyzx.sxgkd.edu.cn/info/1023/5291.htm",
+      "category": "竞赛活动",
+      "title": "关于“一网通办”线上办事流程上线运行及做好有关工作的通知",
+      "date": "2026-09-04",
+      "source": "智慧校园中心 / 信息服务",
+      "url": "https://zhxyzx.sxgkd.edu.cn/info/1023/5291.htm",
+      "summary": "官网发布竞赛活动相关通知。-工科大智慧校园中心 首页 中心概况 中心简介 科室设置 政策法规 国家法规 学校制度 服务指南 校园卡 网站与信息系统 网络服务 企业微信 多媒体教室 网络安全 信息公开 工作计划 工作总结 评优评先 项目采购 信息化建设 下载中心 首页  工作动态 关于“一网通办”线上办事流程上线运行及做好有关工作的通知 2026-09-04 来源： 阅读： 各部门、各单位： 为深入推进我校“一网通办”工作，持续提升管理服务效能，根据学校“十大攻坚行动”工作安排部署，智慧校园中心深入各职能部门开展业务调研，结合各部门需求梳理并",
+      "attachments": [
+        {
+          "name": "业务流程操作手册-手机端企业微信.pdf",
+          "url": "https://zhxyzx.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=2015408826&wbfileid=9ED6567A88EFE4FFE2CA342E54375D86"
+        },
+        {
+          "name": "业务流程操作手册-电脑端融合门户.pdf",
+          "url": "https://zhxyzx.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=2015408826&wbfileid=151533B29F55E00A6CC08983AEE4A734"
+        }
+      ],
+      "firstSeenAt": "2026-09-04 12:20:52",
+      "lastSeenAt": "2026-09-04 12:20:52",
+      "timeHints": [],
+      "scope": "校级",
+      "unit": "智慧校园中心"
     }
   ]
 }
