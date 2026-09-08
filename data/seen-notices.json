@@ -1,5 +1,5 @@
 {
-  "lastCheckAt": "2026-09-07 20:19:20",
+  "lastCheckAt": "2026-09-08 19:09:33",
   "items": [
     {
       "id": "https://cxcyxy.sxgkd.edu.cn/info/1036/4946.htm",
@@ -1397,6 +1397,36 @@
       "timeHints": [],
       "scope": "校级",
       "unit": "智慧校园中心"
+    },
+    {
+      "id": "https://cxcyxy.sxgkd.edu.cn/info/1036/5056.htm",
+      "category": "学业考试",
+      "title": "关于山西省第十届中华职业教育创新创业大赛校内选拔赛材料报送的通知",
+      "date": "2026-09-07",
+      "source": "创新创业学院 / 通知公告",
+      "url": "https://cxcyxy.sxgkd.edu.cn/info/1036/5056.htm",
+      "summary": "官网发布学业考试相关通知，面向相关学生提醒办理或参加事项。截止时间为2026-09-07。具体名单和要求以官网原文为准。",
+      "attachments": [
+        {
+          "name": "附件1：竞赛平台操作方法.doc",
+          "url": "https://cxcyxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1792760113&wbfileid=D47A3C1F4690DD8975E41648D12F061F"
+        },
+        {
+          "name": "附件2：山西省第十届中华职业教育创新创业大赛校内选拔赛推荐表.xlsx",
+          "url": "https://cxcyxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1792760113&wbfileid=04EDCF6BAC2A55590517B2327E428BF4"
+        }
+      ],
+      "firstSeenAt": "2026-09-08 19:09:33",
+      "lastSeenAt": "2026-09-08 19:09:33",
+      "timeHints": [
+        {
+          "label": "截止时间",
+          "value": "2026-09-07",
+          "startDate": "2026-09-07"
+        }
+      ],
+      "scope": "校级",
+      "unit": "创新创业学院"
     }
   ]
 }
