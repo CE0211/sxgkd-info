@@ -1,5 +1,5 @@
 {
-  "lastCheckAt": "2026-09-15 12:45:51",
+  "lastCheckAt": "2026-09-15 19:36:56",
   "items": [
     {
       "id": "https://cxcyxy.sxgkd.edu.cn/info/1036/4946.htm",
@@ -1451,6 +1451,21 @@
       "timeHints": [],
       "scope": "学院",
       "unit": "计算机工程学院"
+    },
+    {
+      "id": "https://xsgzb.sxgkd.edu.cn/info/1028/4290.htm",
+      "category": "学业考试",
+      "title": "关于做好2025",
+      "date": "2026-09-15",
+      "source": "学生工作部 / 通知公告",
+      "url": "https://xsgzb.sxgkd.edu.cn/info/1028/4290.htm",
+      "summary": "官网发布学业考试相关通知，面向相关学生提醒办理或参加事项。具体名单和要求以官网原文为准。",
+      "attachments": [],
+      "firstSeenAt": "2026-09-15 19:36:56",
+      "lastSeenAt": "2026-09-15 19:36:56",
+      "timeHints": [],
+      "scope": "校级",
+      "unit": "学生工作部"
     }
   ]
 }
