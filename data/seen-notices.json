@@ -1,5 +1,5 @@
 {
-  "lastCheckAt": "2026-09-15 19:36:56",
+  "lastCheckAt": "2026-09-16 19:23:47",
   "items": [
     {
       "id": "https://cxcyxy.sxgkd.edu.cn/info/1036/4946.htm",
@@ -1466,6 +1466,72 @@
       "timeHints": [],
       "scope": "校级",
       "unit": "学生工作部"
+    },
+    {
+      "id": "https://www.sxgkd.edu.cn/info/1024/28746.htm",
+      "category": "学业考试",
+      "title": "山西工程科技职业大学2026年公开招聘博士研究生卫培刚等7名拟聘人员公示",
+      "date": "2026-09-16",
+      "source": "学校主站 / 通知公告",
+      "url": "https://www.sxgkd.edu.cn/info/1024/28746.htm",
+      "summary": "官网发布学业考试相关通知，面向相关学生提醒办理或参加事项。具体名单和要求以官网原文为准。",
+      "attachments": [],
+      "firstSeenAt": "2026-09-16 19:23:47",
+      "lastSeenAt": "2026-09-16 19:23:47",
+      "timeHints": [],
+      "scope": "校级",
+      "unit": "学校主站"
+    },
+    {
+      "id": "https://jzgcxy.sxgkd.edu.cn/info/1026/11601.htm",
+      "category": "学业考试",
+      "title": "建筑工程学院关于2026",
+      "date": "2026-09-16",
+      "source": "建筑工程学院 / 学院公开页",
+      "url": "https://jzgcxy.sxgkd.edu.cn/info/1026/11601.htm",
+      "summary": "建筑工程学院发布学业考试相关通知。-2027学年 第一学期期初补考工作安排-山西工程科技职业大学建筑工程学院 欢迎来到山西工程科技职业大学建筑工程学院！今天是 书记院长信箱 首页 学院概况 学院简介 党政领导 师资队伍 机构设置 党建工作 党组织机构 党建动态 双高建设 专业建设 专业介绍 产教融合 校企合作 科技研发 创新创业 校友工作 国际交流 技能竞赛 教育教学 教学工作 师德师风专栏 考务工作 国家级教学成果申报 团学工作 学生新闻 学生风采 招生就业 招生工作 就业工作 招聘信息 首页  建筑工程学院关于2026-2027学年 第一学期期",
+      "attachments": [
+        {
+          "name": "附件二：2026-2027学年第一学期期初考查课补考安排.xlsx",
+          "url": "https://jzgcxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1801806681&wbfileid=76009505FF41A55AC44AEBDF37E4497E"
+        },
+        {
+          "name": "附件一：2026-2027学年第一学期期初考试课补考安排.表xls.xls",
+          "url": "https://jzgcxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1801806681&wbfileid=7E7E0E286C4296CF9E6491207843F23A"
+        }
+      ],
+      "firstSeenAt": "2026-09-16 19:23:47",
+      "lastSeenAt": "2026-09-16 19:23:47",
+      "timeHints": [
+        {
+          "label": "缓考时间",
+          "value": "2026-10-15 22:00",
+          "startDate": "2026-10-15",
+          "startTime": "2200"
+        },
+        {
+          "label": "截止时间",
+          "value": "2026-09-29",
+          "startDate": "2026-09-29"
+        }
+      ],
+      "scope": "学院",
+      "unit": "建筑工程学院"
+    },
+    {
+      "id": "https://jzgcxy.sxgkd.edu.cn/info/1026/11591.htm",
+      "category": "学业考试",
+      "title": "建筑工程学院勤工助学岗位招聘公告",
+      "date": "2026-09-16",
+      "source": "建筑工程学院 / 学院公开页",
+      "url": "https://jzgcxy.sxgkd.edu.cn/info/1026/11591.htm",
+      "summary": "建筑工程学院发布学业考试相关通知。-山西工程科技职业大学建筑工程学院 欢迎来到山西工程科技职业大学建筑工程学院！今天是 书记院长信箱 首页 学院概况 学院简介 党政领导 师资队伍 机构设置 党建工作 党组织机构 党建动态 双高建设 专业建设 专业介绍 产教融合 校企合作 科技研发 创新创业 校友工作 国际交流 技能竞赛 教育教学 教学工作 师德师风专栏 考务工作 国家级教学成果申报 团学工作 学生新闻 学生风采 招生就业 招生工作 就业工作 招聘信息 首页  建筑工程学院勤工助学岗位招聘公告 发布日期：2026-09-16 点击数： 为进一步规范建",
+      "attachments": [],
+      "firstSeenAt": "2026-09-16 19:23:47",
+      "lastSeenAt": "2026-09-16 19:23:47",
+      "timeHints": [],
+      "scope": "学院",
+      "unit": "建筑工程学院"
     }
   ]
 }
