@@ -1,5 +1,5 @@
 {
-  "lastCheckAt": "2026-09-21 20:40:07",
+  "lastCheckAt": "2026-09-22 12:43:55",
   "items": [
     {
       "id": "https://cxcyxy.sxgkd.edu.cn/info/1036/4946.htm",
@@ -1624,6 +1624,26 @@
       "timeHints": [],
       "scope": "校级",
       "unit": "校团委"
+    },
+    {
+      "id": "https://jtgcxy.sxgkd.edu.cn/info/1382/7775.htm",
+      "category": "竞赛活动",
+      "title": "交通工程学院勤工助学岗位招聘公告",
+      "date": "2026-09-21",
+      "source": "交通工程学院 / 通知公告",
+      "url": "https://jtgcxy.sxgkd.edu.cn/info/1382/7775.htm",
+      "summary": "交通工程学院发布竞赛活动相关通知。-山西工程科技职业大学-交通工程学院！ 首页 学院概况 学院简介 学院领导 机构设置 联系我们 党建工作 党群动态 宣传工作 组织机构 政策文件 人才培养 本科专业介绍 专科专业介绍 教务动态 产教融合 产教动态 校企合作 实习实训 创新创业 校友工作 科学研究 师资队伍 教学名师 高层次人才 教科研团队 教科研平台 师德失范行为曝光专栏 团学工作 团学动态 学子风采 招生就业 招生工作 就业工作 产业学院 路管家产业学院 学习资源 道桥专业资源库 通知公告 通知公告 首页 >> 通知公告 >> 正文 交通工程学院",
+      "attachments": [
+        {
+          "name": "2.山西工程科技职业大学勤工助学审批表（学生填写）.docx",
+          "url": "https://jtgcxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1835852165&wbfileid=B63E0E9EF0CFA5324FDDAFF9366DD815"
+        }
+      ],
+      "firstSeenAt": "2026-09-22 12:43:55",
+      "lastSeenAt": "2026-09-22 12:43:55",
+      "timeHints": [],
+      "scope": "学院",
+      "unit": "交通工程学院"
     }
   ]
 }
