@@ -1,5 +1,5 @@
 {
-  "lastCheckAt": "2026-09-25 19:43:04",
+  "lastCheckAt": "2026-09-26 12:47:55",
   "items": [
     {
       "id": "https://cxcyxy.sxgkd.edu.cn/info/1036/4946.htm",
@@ -1733,6 +1733,30 @@
       "timeHints": [],
       "scope": "学院",
       "unit": "工程管理学院"
+    },
+    {
+      "id": "https://www.sxgkd.edu.cn/info/1024/28856.htm",
+      "category": "学业考试",
+      "title": "山西工程科技职业大学2026年公开招聘博士研究生刘笑等2名拟聘人员公示",
+      "date": "2026-09-24",
+      "source": "学校主站 / 通知公告",
+      "url": "https://www.sxgkd.edu.cn/info/1024/28856.htm",
+      "summary": "官网发布学业考试相关通知，面向相关学生提醒办理或参加事项。具体名单和要求以官网原文为准。",
+      "attachments": [
+        {
+          "name": "山西工程科技职业大学2026年公开招聘博士研究生刘笑等2名拟聘人员名单.xlsx",
+          "url": "https://www.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1732861103&wbfileid=A55E5F2653FF7B8E643FF8A06CE292E9"
+        },
+        {
+          "name": "山西工程科技职业大学2026年公开招聘博士研究生刘笑等2名拟聘人员名单.xlsx",
+          "url": "https://www.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1732861103&wbfileid=A55E5F2653FF7B8E643FF8A06CE292E9"
+        }
+      ],
+      "firstSeenAt": "2026-09-26 12:47:55",
+      "lastSeenAt": "2026-09-26 12:47:55",
+      "timeHints": [],
+      "scope": "校级",
+      "unit": "学校主站"
     }
   ]
 }
