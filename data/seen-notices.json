@@ -1,5 +1,5 @@
 {
-  "lastCheckAt": "2026-09-29 20:41:40",
+  "lastCheckAt": "2026-09-30 13:23:43",
   "items": [
     {
       "id": "https://cxcyxy.sxgkd.edu.cn/info/1036/4946.htm",
@@ -1757,6 +1757,32 @@
       "timeHints": [],
       "scope": "校级",
       "unit": "学校主站"
+    },
+    {
+      "id": "https://jxjyxy.sxgkd.edu.cn/info/1043/7033.htm",
+      "category": "学业考试",
+      "title": "关于组织2026年成人高考第二学历教育免试生测试的通知",
+      "date": "2026-09-30",
+      "source": "继续教育与培训学院 / 通知公告",
+      "url": "https://jxjyxy.sxgkd.edu.cn/info/1043/7033.htm",
+      "summary": "官网发布学业考试相关通知，面向相关学生提醒办理或参加事项。截止时间为2026-09-29。具体名单和要求以官网原文为准。",
+      "attachments": [
+        {
+          "name": "二学历测试题.docx",
+          "url": "https://jxjyxy.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1831473940&wbfileid=E056D9AD085E2E57386BA34A3BB2E2A5"
+        }
+      ],
+      "firstSeenAt": "2026-09-30 13:23:43",
+      "lastSeenAt": "2026-09-30 13:23:43",
+      "timeHints": [
+        {
+          "label": "截止时间",
+          "value": "2026-09-29",
+          "startDate": "2026-09-29"
+        }
+      ],
+      "scope": "学院",
+      "unit": "继续教育与培训学院"
     }
   ]
 }
