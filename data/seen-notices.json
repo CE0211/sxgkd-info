@@ -1,5 +1,5 @@
 {
-  "lastCheckAt": "2026-10-10 13:40:46",
+  "lastCheckAt": "2026-10-10 20:22:23",
   "items": [
     {
       "id": "https://cxcyxy.sxgkd.edu.cn/info/1036/4946.htm",
@@ -1841,6 +1841,42 @@
       "timeHints": [],
       "scope": "学院",
       "unit": "继续教育与培训学院"
+    },
+    {
+      "id": "https://xsgzb.sxgkd.edu.cn/info/1028/4420.htm",
+      "category": "学业考试",
+      "title": "关于做好2025",
+      "date": "2026-10-10",
+      "source": "学生工作部 / 通知公告",
+      "url": "https://xsgzb.sxgkd.edu.cn/info/1028/4420.htm",
+      "summary": "官网发布学业考试相关通知，面向相关学生提醒办理或参加事项。具体名单和要求以官网原文为准。",
+      "attachments": [],
+      "firstSeenAt": "2026-10-10 20:22:23",
+      "lastSeenAt": "2026-10-10 20:22:23",
+      "timeHints": [],
+      "scope": "校级",
+      "unit": "学生工作部"
+    },
+    {
+      "id": "https://xsgzb.sxgkd.edu.cn/info/1028/4410.htm",
+      "category": "竞赛活动",
+      "title": "关于做好山西工程科技职业大学2026",
+      "date": "2026-10-10",
+      "source": "学生工作部 / 通知公告",
+      "url": "https://xsgzb.sxgkd.edu.cn/info/1028/4410.htm",
+      "summary": "官网发布竞赛活动相关通知，面向相关学生提醒办理或参加事项。截止时间为2026-10-09。具体名单和要求以官网原文为准。",
+      "attachments": [],
+      "firstSeenAt": "2026-10-10 20:22:23",
+      "lastSeenAt": "2026-10-10 20:22:23",
+      "timeHints": [
+        {
+          "label": "截止时间",
+          "value": "2026-10-09",
+          "startDate": "2026-10-09"
+        }
+      ],
+      "scope": "校级",
+      "unit": "学生工作部"
     }
   ]
 }
