@@ -1,5 +1,5 @@
 {
-  "lastCheckAt": "2026-10-20 12:39:04",
+  "lastCheckAt": "2026-10-21 12:32:29",
   "items": [
     {
       "id": "https://cxcyxy.sxgkd.edu.cn/info/1036/4946.htm",
@@ -2010,6 +2010,27 @@
       ],
       "scope": "学院",
       "unit": "建筑设计学院"
+    },
+    {
+      "id": "https://xsgzb.sxgkd.edu.cn/info/1028/4480.htm",
+      "category": "竞赛活动",
+      "title": "关于做好2025",
+      "date": "2026-10-20",
+      "source": "学生工作部 / 通知公告",
+      "url": "https://xsgzb.sxgkd.edu.cn/info/1028/4480.htm",
+      "summary": "官网发布竞赛活动相关通知，面向相关学生提醒办理或参加事项。截止时间为2026-10-19。具体名单和要求以官网原文为准。",
+      "attachments": [],
+      "firstSeenAt": "2026-10-21 12:32:29",
+      "lastSeenAt": "2026-10-21 12:32:29",
+      "timeHints": [
+        {
+          "label": "截止时间",
+          "value": "2026-10-19",
+          "startDate": "2026-10-19"
+        }
+      ],
+      "scope": "校级",
+      "unit": "学生工作部"
     }
   ]
 }
