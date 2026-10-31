@@ -1,5 +1,5 @@
 {
-  "lastCheckAt": "2026-10-30 20:42:06",
+  "lastCheckAt": "2026-10-31 13:24:59",
   "items": [
     {
       "id": "https://cxcyxy.sxgkd.edu.cn/info/1036/4946.htm",
@@ -2031,6 +2031,26 @@
       ],
       "scope": "校级",
       "unit": "学生工作部"
+    },
+    {
+      "id": "https://www.sxgkd.edu.cn/info/1024/29196.htm",
+      "category": "学业考试",
+      "title": "山西工程科技职业大学 2026年公开招聘博士研究生戎丹等6名拟聘人员公示",
+      "date": "2026-10-30",
+      "source": "学校主站 / 通知公告",
+      "url": "https://www.sxgkd.edu.cn/info/1024/29196.htm",
+      "summary": "官网发布学业考试相关通知，面向相关学生提醒办理或参加事项。具体名单和要求以官网原文为准。",
+      "attachments": [
+        {
+          "name": "山西工程科技职业大学2026年公开招聘博士研究生戎丹等6名拟聘人员名单.xlsx",
+          "url": "https://www.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1732861103&wbfileid=FC6AB2C7B68212C06C6443235CEBC698"
+        }
+      ],
+      "firstSeenAt": "2026-10-31 13:24:59",
+      "lastSeenAt": "2026-10-31 13:24:59",
+      "timeHints": [],
+      "scope": "校级",
+      "unit": "学校主站"
     }
   ]
 }
