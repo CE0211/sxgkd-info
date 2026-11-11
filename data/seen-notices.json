@@ -1,5 +1,5 @@
 {
-  "lastCheckAt": "2026-11-11 13:58:13",
+  "lastCheckAt": "2026-11-11 22:03:30",
   "items": [
     {
       "id": "https://cxcyxy.sxgkd.edu.cn/info/1036/4946.htm",
@@ -2066,6 +2066,26 @@
       "timeHints": [],
       "scope": "校级",
       "unit": "后勤保卫"
+    },
+    {
+      "id": "https://zhxyzx.sxgkd.edu.cn/info/1023/5361.htm",
+      "category": "竞赛活动",
+      "title": "单一来源采购论证公示",
+      "date": "2026-11-11",
+      "source": "智慧校园中心 / 信息服务",
+      "url": "https://zhxyzx.sxgkd.edu.cn/info/1023/5361.htm",
+      "summary": "官网发布竞赛活动相关通知。-工科大智慧校园中心 首页 中心概况 中心简介 科室设置 政策法规 国家法规 学校制度 服务指南 校园卡 网站与信息系统 网络服务 企业微信 多媒体教室 网络安全 信息公开 工作计划 工作总结 评优评先 项目采购 信息化建设 下载中心 首页  工作动态 单一来源采购论证公示 2026-11-11 来源：智慧校园中心 阅读： 一、 采购项目名称 ： 山西工程科技职业大学协同办公系统维护项目 二、 预算金额 ： ￥68000元/年 三、 项目信息 ： 山西工程科技职业大学协同办公系统维护服务已于2026年9月17日到期",
+      "attachments": [
+        {
+          "name": "单一来源第三方专家论证意见.pdf",
+          "url": "https://zhxyzx.sxgkd.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=2015408826&wbfileid=2FBD2DE665E1E377B04FA077F7EDA11B"
+        }
+      ],
+      "firstSeenAt": "2026-11-11 22:03:30",
+      "lastSeenAt": "2026-11-11 22:03:30",
+      "timeHints": [],
+      "scope": "校级",
+      "unit": "智慧校园中心"
     }
   ]
 }
