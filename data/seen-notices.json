@@ -1,5 +1,5 @@
 {
-  "lastCheckAt": "2026-11-12 14:59:59",
+  "lastCheckAt": "2026-11-13 14:27:40",
   "items": [
     {
       "id": "https://cxcyxy.sxgkd.edu.cn/info/1036/4946.htm",
@@ -2086,6 +2086,21 @@
       "timeHints": [],
       "scope": "校级",
       "unit": "智慧校园中心"
+    },
+    {
+      "id": "https://xsgzb.sxgkd.edu.cn/info/1028/4570.htm",
+      "category": "学业考试",
+      "title": "关于开展我校优秀心理委员考核及评选的通知",
+      "date": "2026-11-12",
+      "source": "学生工作部 / 通知公告",
+      "url": "https://xsgzb.sxgkd.edu.cn/info/1028/4570.htm",
+      "summary": "官网发布学业考试相关通知，面向相关学生提醒办理或参加事项。具体名单和要求以官网原文为准。",
+      "attachments": [],
+      "firstSeenAt": "2026-11-13 14:27:40",
+      "lastSeenAt": "2026-11-13 14:27:40",
+      "timeHints": [],
+      "scope": "校级",
+      "unit": "学生工作部"
     }
   ]
 }
